@@ -1,0 +1,223 @@
+* {
+    margin:0;
+    padding:0;
+    font-family: garamond;
+}
+
+/*EDICAO DA NAVBAR */
+nav.navbar {
+    font-family: Verdana !important;
+    font-size: x-large;
+}
+/*FIM DA EDIÇÃO DO NAVBAR */
+
+
+
+/*EDIÇÃO DO CAROUSEL*/
+div.carous {
+    width: 100%;
+    height: AUTO;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: #212529;
+}
+
+div#carouselExampleIndicators {
+    width: 95% !important;
+}
+/*fim da edição carousel*/
+
+
+
+
+/* EDIÇÃO MOTIVACIONAL */
+div.containermotivacional {
+    background-color: #212529;
+}
+div.containermotivacional img {
+    width: 100%;
+    height: auto;
+}
+
+div.caixa-motivacao {
+    width: 100%;
+    height: 400px;
+    background-color: aqua;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.caixa-motivacao div.img-motivacao {
+    width: 50%;
+    height: 400px;
+    align-items: center;
+    background-color: bisque;
+    float: left;
+}
+
+div.caixa-motivacao div.img-motivacao img {
+    width: 90%;
+}
+
+div.caixa-motivacao div.txt-motivacao {
+
+    float: right;
+    width: 50%;
+    height: 400px;
+    align-items: center;
+    background-color: rgb(136, 144, 212);
+}
+
+div.caixa-motivacao h1 {
+    font-size: larger;
+    text-align: center;
+    margin-top: 50%;
+}
+
+div.caixa-motivacao h2 {
+    font-size: larger;
+}
+
+
+
+/*FIM DA EDIÇÃO MOTIVACIONAL*/
+
+
+
+
+
+
+/* FOOTER EDIÇÃO */  
+footer.rodape {
+    width: 100%;
+    height: 100%;
+    background-color: #0d2406;
+}
+
+footer.rodape div.caixarodape {
+    /*width: 1200px;*/
+    width: 100%;
+    height: 270px;
+    /*background-color: pink;*/
+    margin: auto;                    /* IMPORTANTE */ 
+}
+
+
+footer.rodape div.caixarodape div.ondeestamos {
+    width: 550px; 
+    height: 270px;
+    /*background-color: #133508;*/
+	float:left;
+    padding-left: 4%;
+}
+
+footer.rodape div.caixarodape div.ondeestamos div.textoondeestamos {
+    width: 590px;
+    height: 50px;
+    float:left;
+    /*background-color: #01163f;*/
+
+}
+
+footer.rodape div.caixarodape div.ondeestamos div.textoondeestamos h2 {
+    text-align: center;
+    margin-top: 10px;
+    line-height: 30px;
+    color: whitesmoke;
+    font-family: garamond, rockwell;
+    font-size: 30px;
+}
+
+footer.rodape div.caixarodape div.ondeestamos div.frame {
+	width: 590px;
+    height: 220px;
+    /*background-color: aqua;*/
+    float:left;
+}
+
+footer.rodape div.caixarodape div.ondeestamos div.frame iframe {
+    margin: 0 20%;
+}
+
+
+
+
+
+
+/* EDITANDO MENU RODAPE */
+
+footer.rodape div.caixarodape div.menurodape {    
+    width: 400px;
+    height: 270px;
+    /*background-color: yellow;*/
+    float: left;
+    text-align: center;
+}
+
+footer.rodape div.caixarodape div.menurodape div.parte1 {
+    width: 100%;
+    height: 180px;
+    /*background-color: blue;*/
+    display: inline-block;
+
+}
+
+footer.rodape div.caixarodape div.menurodape div.parte1 nav.menuf ul {
+    margin-top: 40px;
+}
+
+
+footer.rodape div.caixarodape div.menurodape div.parte1 nav.menuf ul li {
+    list-style: none;
+    font-size: 28px;
+    text-align: center;
+}
+
+footer.rodape div.caixarodape div.menurodape div.parte1 nav.menuf ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+footer.rodape div.caixarodape div.menurodape div.parte1 nav.menuf ul li a:hover {
+    color: yellowgreen;
+}
+
+footer.rodape div.caixarodape div.menurodape div.parte2 {
+    width: 100%;
+    height: 50px;
+    /*background-color: plum;*/
+    display: inline-block;
+}
+
+footer.rodape div.caixarodape div.menurodape div.parte2 h2 {
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    color: whitesmoke;
+}
+
+footer.rodape div.caixarodape div.menurodape div.parte3 {
+    width: 100%;
+    height: 40px;
+    display: inline-block;
+    /*background-color: plum;*/
+}
+
+footer.rodape div.caixarodape div.menurodape div.parte3 p {
+    color: whitesmoke;
+    text-align: right;
+    padding-right: 2px;
+}
+
+footer.rodape div.caixarodape div.menurodape div.parte3 p a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+footer.rodape div.caixarodape div.menurodape div.parte3 p a:hover {
+    color:lightgoldenrodyellow;
+}
