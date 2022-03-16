@@ -1,25 +1,30 @@
 <?php
+
 require_once('./instrutor_crud.php');
 
-// cpf, nomeInstrutor, dataNascimento, email, telefone, cidade, siglaUf, bairro, rua, numero, complemento
 if (
+    $_POST['idInstrutor_txt'] == NULL ||
     $_POST['cpf_txt'] == NULL ||
     $_POST['nomeInstrutor_txt'] == NULL ||
     $_POST['dataNascimento_txt'] == NULL ||
     $_POST['email_txt'] == NULL ||
     $_POST['telefone_txt'] == NULL ||
     $_POST['cidade_txt'] == NULL ||
-    $_POST['siglaUf_txt'] == NULL  ||
+    $_POST['siglaUf_txt'] == NULL ||
     $_POST['bairro_txt'] == NULL ||
     $_POST['rua_txt'] == NULL ||
     $_POST['numero_txt'] == NULL ||
-    $_POST['complemento_txt'] == NULL 
+    $_POST['complemento_txt'] == NULL
+
+
+
 ) {
     header('location: erro.php?status=access-deny');
     die();
 }
 
 $instrutor = new stdClass();
+$instrutor->idInstrutor = $_POST['idInstrutor_txt'];
 $instrutor->cpf = $_POST['cpf_txt'];
 $instrutor->nomeInstrutor = $_POST['nomeInstrutor_txt'];
 $instrutor->dataNascimento = $_POST['dataNascimento_txt'];
@@ -33,12 +38,10 @@ $instrutor->numero = $_POST['numero_txt'];
 $instrutor->complemento = $_POST['complemento_txt'];
 
 
-if (create($instrutor)) {
-    // header("location: conexao.php?status=success");
-    echo "Sucesso";
+if (update($instrutor)) {
+    header("location: instrutor_listagem.php?status=success");
     exit;
 } else {
-    // header("location: erro.php?status=fail");
-    echo "Falha";
+    header("location: instrutor_edicao_formulario.php?status=fail");
     exit;
 }

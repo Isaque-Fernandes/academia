@@ -11,11 +11,11 @@ function getConnection()
     try {
         $key = 'strval';
         $con = new PDO("mysql:host={$key(__HOST__)}; dbname={$key(__DATABASE__)}", __USER__, __PASS__)
-            or die("Error trying to connect to the database");
+            or die("Erro ao tentar conectar no banco de dados");
         $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $con;
-    } catch (PDOException $error) {
-        echo "Error to connect to the database. Error: {$error->getMessage()}";
+    } catch (PDOException $erro) {
+        echo "Erro ao conectar ao banco. Erro: {$erro->getMessage()}";
         exit;
     }
 }
