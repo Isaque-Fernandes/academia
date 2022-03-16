@@ -9,7 +9,7 @@ function addUsuario($usuario)
     try {
         $con = getConnection();
 
-        $stmt = $con->prepare("INSERT INTO usuario(cpf, nome, email, telefone, dataNascimento, atestadoMedico, comentario, dataInicio) VALUES (:cpf, :nome, :email, :telefone, :dataNascimento, :atestadoMedico, :comentario, :dataInicio)");
+        $stmt = $con->prepare("INSERT INTO usuario(cpf, nome, email, telefone, dataNascimento, atestadoMedico, comentario, dataInicio, assinatura_id) VALUES (:cpf, :nome, :email, :telefone, :dataNascimento, :atestadoMedico, :comentario, :dataInicio, :assinatura_id)");
 
         $stmt->bindParam(":cpf", $usuario->cpf);
         $stmt->bindParam(":nome", $usuario->nome);
@@ -19,6 +19,8 @@ function addUsuario($usuario)
         $stmt->bindParam(":atestadoMedico", $usuario->atestadoMedico);
         $stmt->bindParam(":comentario", $usuario->comentario);
         $stmt->bindParam(":dataInicio", $usuario->dataInicio);
+        $stmt->bindParam(":assinatura_id", $usuario->assinatura_id);
+       
 
         if ($stmt->execute())
             return true;

@@ -1,3 +1,7 @@
+<?php
+    require_once('./usuario_crud.php');
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +14,7 @@
     
     <div class="container col-6">
         <fieldset>
-            <legend>Cadastro de Cidade</legend>
+            <legend>Cadastro de Usuário</legend>
             <form action="./usuario_registro.php" method="post">
                 <div class="form-group mb-3">
                     <label for="nome_id" class="form-label">Nome</label>
@@ -33,17 +37,28 @@
                     <input class="form-control" type="text" name="txtDataNascimento" id="dataNascimento_id" placeholder="Data de nascimento do usuário" required>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="atestadoMedico_id" class="form-label">Atestado Medico</label>
-                    <input class="form-control" type="text" name="txtAtestadoMedico" id="atestadoMedico_id" placeholder="Atestado medico do usuário" required>
+                    <label for="atestadoMedico_id" class="form-label">Atestado Médico</label>
+                    <input class="form-control" type="text" name="txtAtestadoMedico" id="atestadoMedico_id" placeholder="Atestado médico do usuário" required>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="comentario_id" class="form-label">Comentario</label>
+                    <label for="comentario_id" class="form-label">Comentário</label>
                     <input class="form-control" type="text" name="txtComentario" id="comentario_id" placeholder="Comentario" required>
                 </div>
                 <div class="form-group mb-3">
                     <label for="dataInicio_id" class="form-label">Data de início</label>
                     <input class="form-control" type="text" name="txtDataInicio" id="dataInicio_id" placeholder="Data de Início do usuário" required>
                 </div>
+                <div class="form-group mb-3">
+                    <label for="assinatura_id" class="form-label">Assinatura</label>
+                    <select class="form-select" aria-label="Selecione um Plano" name="txtAssinaturaID" id="assinatura_id" required>
+                        <option selected disabled>Selecione um Plano</option>
+                        <?php foreach (listarUsuario() as $usuario) : ?>
+                            <option value="<?= $usuario['id'] ?>"><?= "{$usuario['planos']} - {$usuario['precos']}" ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+
+
                 <button class="btn btn-dark" type="submit">Cadastrar</button>
             </form>
         </fieldset>

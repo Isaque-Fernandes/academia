@@ -9,7 +9,9 @@
         $_POST['txtDataNascimento'] == NULL ||
         $_POST['txtAtestadoMedico'] == NULL ||
         $_POST['txtComentario'] == NULL ||
-        $_POST['txtDataInicio'] == NULL
+        $_POST['txtDataInicio'] == NULL ||
+        $_POST['txtAssinaturaID'] == NULL 
+
     ){
         header('location: usuario_erro.php?status=access-deny');
         die();
@@ -24,7 +26,8 @@
     $usuario-> atestadoMedico = $_POST['txtAtestadoMedico'];
     $usuario-> comentario = $_POST['txtComentario'];
     $usuario-> dataInicio = $_POST['txtDataInicio'];
-
+    $usuario-> assinatura_id = $_POST['txtAssinaturaID'];
+    
     if(addUsuario($usuario)){
         echo "Sucesso no cadastro";
         exit;
