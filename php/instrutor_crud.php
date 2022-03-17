@@ -134,3 +134,21 @@ function update($instrutor)
         unset($stmt);
     }
 }
+
+function apagar($idInstrutor)
+{
+    try {
+        $con = getConnection();
+
+        $stmt = $con->prepare("DELETE FROM instrutor WHERE idInstrutor = ?");
+        $stmt->bindParam(1, $idInstrutor);
+
+        if ($stmt->execute())
+            return true;
+    } catch (PDOException $error) {
+        return false;
+    } finally {
+        unset($con);
+        unset($stmt);
+    }
+}
