@@ -5,7 +5,6 @@ USE academia;
 SET SQL_MODE = 'STRICT_ALL_TABLES';
 
 
-/*
 CREATE TABLE usuario(
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	cpf VARCHAR(255) NOT NULL UNIQUE,
@@ -171,7 +170,7 @@ select * from categoria;
 select * from treino;
 select * from treinoExercicio;
 select * from exercicio;
-*/
+
 
 
 create table instrutor(
