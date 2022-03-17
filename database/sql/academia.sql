@@ -5,7 +5,7 @@ USE academia;
 SET SQL_MODE = 'STRICT_ALL_TABLES';
 
 
-
+/*
 CREATE TABLE usuario(
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	cpf VARCHAR(255) NOT NULL UNIQUE,
@@ -25,11 +25,7 @@ INSERT INTO usuario(cpf, nome, email, telefone, dataNascimento, atestadoMedico, 
 	cpf = VALUE (cpf);
 -- DELETE FROM user WHERE ID=3;
 -- UPDATE user SET nome = 'Daniel', CPF = '17127080448' WHERE ID =1;
- /**SELECT NOW();
-	SELECT CURDATE();
-	SELECT CURRENT_DATE;
-	SELECT UUID();
-**/
+
 SELECT * FROM usuario;
 
 
@@ -171,9 +167,8 @@ insert into treinoExercicio(categoria_id, treino_id, exercicio_id) values
 select * from treinoExercicio;
 
 
-/*Join: exerciseTypes
-Tables: category, training,  trainingExercise, exercise  
-*/
+
+
 select 
 c.nome,
 t.nome, 
@@ -191,59 +186,28 @@ select * from categoria;
 select * from treino;
 select * from treinoExercicio;
 select * from exercicio;
-
-
-CREATE TABLE cidade(
-	id INT AUTO_INCREMENT PRIMARY KEY,
-	nome VARCHAR(255) NOT NULL,
-	siglaUf VARCHAR(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-INSERT INTO cidade(nome, siglaUf) VALUES
-	('Niterói', 'RJ'),
-	('Rio de Janeiro', 'RJ'),
-    ('Rio Branco', 'AC');
-SELECT * FROM cidade;
-SELECT * FROM cidade WHERE nome LIKE '%Rio%';
-SELECT * FROM cidade WHERE 	(nome) LIKE ('%Rio%');
-SELECT * FROM cidade WHERE siglaUf='RJ';
-SELECT * FROM cidade ORDER BY nome;
-SELECT COUNT(*) FROM cidade;
-SELECT DISTINCT nome, siglaUf FROM cidade;
-
-
-CREATE TABLE endereco(
-	id INT auto_increment PRIMARY KEY,
-    cidade_id INT NOT NULL,
-	bairro VARCHAR(255) NOT NULL,
-	rua VARCHAR(255) NOT NULL,
-	numero INT NOT NULL,
-	complemento VARCHAR(255) NOT NULL,
-	FOREIGN KEY (cidade_id) REFERENCES cidade(id) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-INSERT INTO endereco(cidade_id, bairro, rua, numero, complemento) VALUES
-	(1, 'Icaraí','Joaquin Távora', 41, 'Apartamento: 404'),
-	(2, 'Duque de Caxias', 'Nossa Senhora de Fátima', 32, 'Em frente ao Corpo de Bombeiros'),
-	(3, 'Maria Bonita', 'Fim do Linha', 666, 'Em frente ao Bar do Zé');
-SELECT * FROM endereco;
+*/
 
 
 create table instrutor(
-	ID INT AUTO_INCREMENT PRIMARY KEY,
-	endereco_id INT NOT NULL,
+	idInstrutor INT AUTO_INCREMENT PRIMARY KEY,
 	cpf VARCHAR(255) NOT NULL,
-	nome VARCHAR(255) NOT NULL,
+    nomeInstrutor VARCHAR(255) NOT NULL,
+	dataNascimento VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
 	telefone VARCHAR(255) NOT NULL,
-	dataNascimento VARCHAR(255) NOT NULL,
-	FOREIGN KEY (endereco_id) REFERENCES endereco(id) ON DELETE CASCADE 
+	cidade VARCHAR(255) NOT NULL,
+	siglaUf VARCHAR(255) NOT NULL,
+    bairro VARCHAR(255) NOT NULL,
+	rua VARCHAR(255) NOT NULL,
+	numero INT NOT NULL,
+	complemento VARCHAR(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-INSERT INTO instrutor(endereco_id, cpf, nome, email, telefone, dataNascimento) VALUES
-	 ( 1, '894234123-54', ' Lúis ','luis@gmail.com', '40028925','01-02-2005'),
-	 ( 2, '894234123-53', ' Marcos','marcos@gmail.com', '40028926', '10-06-2010'),
-	 ( 3, '894234123-52', 'Christina','christina@gmail.com', '40028927', '07-03-1996');
 SELECT * FROM instrutor;
 
+SELECT nomeInstrutor  FROM instrutor WHERE nomeInstrutor="Fulano" ;
 
+/*
 create table fichaTreino(
 	ID INT AUTO_INCREMENT PRIMARY KEY,
 	usuario_id INT NOT NULL,
@@ -264,10 +228,11 @@ SELECT * FROM fichaTreino;
 /*Join: userCard
 Tables: user, trainingCard, professional, training, category, trainingExercise, exercise  
 */
-select * from usuario;
+/*select * from usuario;*/
+/*
 select 
 	u.cpf, u.dataNascimento, u.nome, u.comentario, u.atestadoMedico,
-	i.nome instrutor,
+	i.nomeInstrutor instrutor,
 	c.nome categoriaTreino,
 	t.nome, 
 	e.nome, 
@@ -288,20 +253,22 @@ on te.exercicio_id = e.id
 where ft.usuario_id ;
 
 
+
+
 /*Join: professionalCard
 Tables: professional, address, city 
 */
-select 
-	i.cpf, i.nome, i.email, i.telefone,
-	c.nome Cidade, c.siglaUf UF,
-	e.bairro, e.rua, e.numero, e.complemento
-from instrutor i
-join endereco e
-on i.endereco_id = e.id
-join cidade c
-on e.cidade_id = c.id;
+
+select * from instrutor;
 
 
+create table login (
+ID int auto_increment primary key, 
+usuario varchar(255) not null,
+senha varchar(255) not null
+);
+insert into login(usuario, senha) values
+("admin123", "admin");
 
 
 

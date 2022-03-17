@@ -1,5 +1,5 @@
 <?php
-require_once('./instrutor_crud.php');
+require_once('./instrutor_acao.php');
 
 // cpf, nomeInstrutor, dataNascimento, email, telefone, cidade, siglaUf, bairro, rua, numero, complemento
 if (
@@ -34,11 +34,11 @@ $instrutor->complemento = $_POST['complemento_txt'];
 
 
 if (create($instrutor)) {
-    // header("location: conexao.php?status=success");
-    echo "Sucesso";
+    header("location: conexao.php?status=success");
+
     exit;
 } else {
-    // header("location: erro.php?status=fail");
+    header("location: erro.php?status=fail");
     echo "Falha";
     exit;
 }

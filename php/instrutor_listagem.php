@@ -1,6 +1,6 @@
 <?php
 
-require_once('./instrutor_crud.php');
+require_once('./instrutor_acao.php');
 
 ?>
 
@@ -35,7 +35,7 @@ require_once('./instrutor_crud.php');
                 <th>complemento</th>
             </thead>
             <tbody>
-                <?php foreach (get() as $instrutor) : ?>
+                <?php foreach ($_SESSION['instrutores'] as $instrutor) : ?>
                     <tr>
                         <td><?= $instrutor->idInstrutor ?></td>
                         <td><?= $instrutor->cpf ?></td>

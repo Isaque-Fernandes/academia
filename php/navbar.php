@@ -38,10 +38,10 @@
                     </ul>
                 </li>
             </ul>
-            <form class="d-flex">
+            <!-- <form class="d-flex">
                 <input class="form-control me-2" name="nome" type="search" placeholder="Informe o produto" aria-label="Search">
                 <button class="btn btn-outline-success" formaction="./vitrine.php" type="submit">Localizar</button>
-            </form>
+            </form> -->
         </div>
     </div>
 </nav>

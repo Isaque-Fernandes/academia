@@ -1,6 +1,6 @@
 <?php
 
-require_once('./instrutor_crud.php');
+require_once('./instrutor_acao.php');
 
 if ($_GET['idInstrutor'] == NULL) {
     header('location: erro.php?status=access-deny');

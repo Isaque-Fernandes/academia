@@ -1,5 +1,5 @@
 <?php
-require_once('./instrutor_crud.php');
+require_once('./instrutor_acao.php');
 $instrutor = findById($_GET["idInstrutor"]);
 ?>
 
