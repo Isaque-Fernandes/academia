@@ -12,52 +12,55 @@
 <body>
     <!-- cpf, nomeInstrutor, dataNascimento,  email, telefone -->
     <?php include_once "./navbar.php" ?>
+
     <div class="container col-12">
         <fieldset>
             <legend>Cadastro de Instrutor</legend>
             <form action="./instrutor_registro.php" method="post">
                 <div class="form-group mb-3">
-                    <label for="cpf_id" class="form-label">cpf</label>
+                    <label for="cpf_id" class="form-label">CPF</label>
                     <input class="form-control" type="text" name="cpf_txt" id="cpf_id" placeholder="Informe o nome da cidade" required>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="nomeInstrutor_id" class="form-label">nomeInstrutor</label>
+                    <label for="nomeInstrutor_id" class="form-label">Nome </label>
                     <input class="form-control" type="text" name="nomeInstrutor_txt" id="nomeInstrutor_id" placeholder="Informe o nome da cidade" required>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="dataNascimento_id" class="form-label">dataNascimento</label>
+                    <label for="dataNascimento_id" class="form-label">Data Nascimento</label>
                     <input class="form-control" type="text" name="dataNascimento_txt" id="dataNascimento_id" placeholder="Informe o nome da cidade" required>
                 </div>
+                <legend>Contato</legend>
                 <div class="form-group mb-3">
-                    <label for="email_id" class="form-label">email</label>
+                    <label for="email_id" class="form-label">Email</label>
                     <input class="form-control" type="text" name="email_txt" id="email_id" placeholder="Informe o nome da cidade" required>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="telefone_id" class="form-label">telefone</label>
+                    <label for="telefone_id" class="form-label">Telefone</label>
                     <input class="form-control" type="text" name="telefone_txt" id="telefone_id" placeholder="Informe o nome da cidade" required>
                 </div>
+                <legend>Endereço</legend>
                 <div class="form-group mb-3">
-                    <label for="cidade_id" class="form-label">cidade</label>
+                    <label for="cidade_id" class="form-label">Cidade</label>
                     <input class="form-control" type="text" name="cidade_txt" id="cidade_id" placeholder="Informe o nome da cidade" required>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="siglaUf_id" class="form-label">siglaUf</label>
+                    <label for="siglaUf_id" class="form-label">Sigla UF</label>
                     <input class="form-control" type="text" name="siglaUf_txt" id="siglaUf_id" placeholder="Informe o nome da cidade" required>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="bairro_id" class="form-label">bairro</label>
+                    <label for="bairro_id" class="form-label">Bairro</label>
                     <input class="form-control" type="text" name="bairro_txt" id="bairro_id" placeholder="Informe o nome da cidade" required>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="rua_id" class="form-label">rua</label>
+                    <label for="rua_id" class="form-label">Rua</label>
                     <input class="form-control" type="text" name="rua_txt" id="rua_id" placeholder="Informe o nome da cidade" required>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="numero_id" class="form-label">numero</label>
+                    <label for="numero_id" class="form-label">Número</label>
                     <input class="form-control" type="number" name="numero_txt" id="numero_id" placeholder="Informe o nome da cidade" required>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="complemento_id" class="form-label">complemento</label>
+                    <label for="complemento_id" class="form-label">Complemento</label>
                     <input class="form-control" type="text" name="complemento_txt" id="complemento_id" placeholder="Informe o nome da cidade" required>
                 </div>
                 <button class="btn btn-dark" type="submit">Cadastrar</button>

@@ -19,20 +19,21 @@ require_once('./instrutor_acao.php');
 <body>
     <?php include_once "./navbar.php" ?>
     <div class="container col-12">
+        <legend class="mt-3 mb-3">Listagem de Instrutores</legend>
         <table class="table table-stripped">
             <thead>
-                <th>idInstrutor</th>
-                <th>cpf</th>
-                <th>nomeInstrutor</th>
-                <th>dataNascimento</th>
-                <th>email</th>
-                <th>telefone</th>
-                <th>nomeCidade</th>
-                <th>siglaUf</th>
-                <th>bairro</th>
-                <th>rua</th>
-                <th>numero</th>
-                <th>complemento</th>
+                <th>ID</th>
+                <th>CPF</th>
+                <th>Nome</th>
+                <th>Data Nascimento</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Nome Cidade</th>
+                <th>Sigla UF</th>
+                <th>Bairro</th>
+                <th>Rua</th>
+                <th>Número</th>
+                <th>Complemento</th>
             </thead>
             <tbody>
                 <?php foreach ($_SESSION['instrutores'] as $instrutor) : ?>

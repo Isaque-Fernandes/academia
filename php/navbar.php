@@ -15,7 +15,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="./instrutor_formulario.php">Cadastro</a></li>
-                        <li><a class="dropdown-item" href="./instrutor_listagem.php">Lista</a></li>
+                        <li><a class="dropdown-item" href="./instrutor_listagem.php">Listagem</a></li>
                     </ul>
                 </li>
 
@@ -33,8 +33,8 @@
                         Ficha Treino
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">#</a></li>
-                        <li><a class="dropdown-item" href="#">#</a></li>
+                        <li><a class="dropdown-item" href="./fichaTreino_formulario.php">Cadastro</a></li>
+                        <li><a class="dropdown-item" href="./fichaTreino_listagem.php">Listagem</a></li>
                     </ul>
                 </li>
             </ul>
