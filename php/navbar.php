@@ -16,24 +16,9 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="./usuario_form.php">Cadastro</a></li>
                         <li><a class="dropdown-item" href="./usuario_lista.php">Lista</a></li>
-                        <li><a class="dropdown-item" href="./usuario_edicao.php">Edição</a></li>
-                    </ul>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Planos
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">#</a></li>
-                        <li><a class="dropdown-item" href="#">#</a></li>
                     </ul>
                 </li>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" name="nome" type="search" placeholder="Procure o usuário" aria-label="Search">
-                <button class="btn btn-outline-success" formaction="#" type="submit">Localizar</button>
-            </form>
         </div>
     </div>
 </nav>

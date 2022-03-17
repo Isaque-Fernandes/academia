@@ -1,6 +1,6 @@
  <?php
 
-require_once('./usuario_crud.php');
+require_once('./usuario_acao.php');
 
 if ($_GET['idUsuario'] == NULL) {
     header('location: erro.php?status=access-deny');

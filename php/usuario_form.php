@@ -1,5 +1,5 @@
 <?php
-    require_once('./usuario_crud.php');
+    require_once('./usuario_acao.php');
 ?>
 
 <head>
@@ -22,31 +22,31 @@
                 </div>
                 <div class="form-group mb-3">
                     <label for="cpf_id" class="form-label">CPF</label>
-                    <input class="form-control" type="text" name="txtCpf" id="cpf_id" placeholder="CPF do usuário" required>
+                    <input class="form-control" type="text" name="txtCpf" id="cpf_id" placeholder="CPF" required>
                 </div>
                 <div class="form-group mb-3">
                     <label for="email_id" class="form-label">Email</label>
-                    <input class="form-control" type="text" name="txtEmail" id="email_id" placeholder="Email do usuário" required>
+                    <input class="form-control" type="text" name="txtEmail" id="email_id" placeholder="Email" required>
                 </div>
                 <div class="form-group mb-3">
                     <label for="telefone_id" class="form-label">Telefone</label>
-                    <input class="form-control" type="text" name="txtTelefone" id="telefone_id" placeholder="Telefone do usuário" required>
+                    <input class="form-control" type="text" name="txtTelefone" id="telefone_id" placeholder="Telefone" required>
                 </div>
                 <div class="form-group mb-3">
                     <label for="dataNascimento_id" class="form-label">Data de Nascimento</label>
-                    <input class="form-control" type="text" name="txtDataNascimento" id="dataNascimento_id" placeholder="Data de nascimento do usuário" required>
+                    <input class="form-control" type="date" name="txtDataNascimento" id="dataNascimento_id" placeholder="00-00-0000" required>
                 </div>
                 <div class="form-group mb-3">
                     <label for="atestadoMedico_id" class="form-label">Atestado Médico</label>
-                    <input class="form-control" type="text" name="txtAtestadoMedico" id="atestadoMedico_id" placeholder="Atestado médico do usuário" required>
+                    <input class="form-control" type="text" name="txtAtestadoMedico" id="atestadoMedico_id" placeholder="Atestado médico do usuário">
                 </div>
                 <div class="form-group mb-3">
                     <label for="comentario_id" class="form-label">Comentário</label>
-                    <input class="form-control" type="text" name="txtComentario" id="comentario_id" placeholder="Comentario" required>
+                    <input class="form-control" type="text" name="txtComentario" id="comentario_id" placeholder="Comentario">
                 </div>
                 <div class="form-group mb-3">
                     <label for="dataInicio_id" class="form-label">Data de início</label>
-                    <input class="form-control" type="text" name="txtDataInicio" id="dataInicio_id" placeholder="Data de Início do usuário" required>
+                    <input class="form-control" type="date" name="txtDataInicio" id="dataInicio_id" placeholder="0000-00-00" required>
                 </div>
                 
 

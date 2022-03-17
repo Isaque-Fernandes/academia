@@ -1,5 +1,5 @@
 <?php
-    require_once('./usuario_crud.php');
+    require_once('./usuario_acao.php');
     $usuario = findById($_GET["idUsuario"]);
 ?>
 
