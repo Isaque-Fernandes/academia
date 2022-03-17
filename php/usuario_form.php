@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    
+    <?php include_once "./navbar.php" ?>
     <div class="container col-6">
         <fieldset>
             <legend>Cadastro de Usuário</legend>
@@ -48,15 +48,7 @@
                     <label for="dataInicio_id" class="form-label">Data de início</label>
                     <input class="form-control" type="text" name="txtDataInicio" id="dataInicio_id" placeholder="Data de Início do usuário" required>
                 </div>
-                <div class="form-group mb-3">
-                    <label for="assinatura_id" class="form-label">Assinatura</label>
-                    <select class="form-select" aria-label="Selecione um Plano" name="txtAssinaturaID" id="assinatura_id" required>
-                        <option selected disabled>Selecione um Plano</option>
-                        <?php foreach (listarUsuario() as $usuario) : ?>
-                            <option value="<?= $usuario['id'] ?>"><?= "{$usuario['planos']} - {$usuario['precos']}" ?></option>
-                        <?php endforeach; ?>
-                    </select>
-                </div>
+                
 
 
                 <button class="btn btn-dark" type="submit">Cadastrar</button>

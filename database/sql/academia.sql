@@ -7,10 +7,10 @@ SET SQL_MODE = 'STRICT_ALL_TABLES';
 CREATE TABLE assinaturas(
 	id INT AUTO_INCREMENT PRIMARY KEY,
     planos VARCHAR(255) NOT NULL,
-    preços DOUBLE NOT NULL
+    precos DOUBLE NOT NULL
 );
 
-INSERT INTO assinaturas(planos, preços) values 
+INSERT INTO assinaturas(planos, precos) values 
 ('Mensal', 89.90),
 ('Trimestral', 69.90);
 
@@ -24,11 +24,9 @@ CREATE TABLE usuario(
 	atestadoMedico VARCHAR(255) DEFAULT NULL,
 	comentario VARCHAR(255) DEFAULT NULL,
 	dataInicio DATE NOT NULL,
-    assinatura_id INT NOT NULL,
-    FOREIGN KEY (assinatura_id) REFERENCES assinaturas(id) ON DELETE CASCADE
     
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-INSERT INTO usuario(cpf, nome, email, telefone, dataNascimento, atestadoMedico, comentario, dataInicio, assinatura_id) VALUES 
+INSERT INTO usuario(cpf, nome, email, telefone, dataNascimento, atestadoMedico, comentario, dataInicio) VALUES 
 	('171270807-47','Isaque','isaque@gmail.com',' 40028921','04-02-1999','Paciente se encontra em perfeitas condições', 'Cliente relata ser sedentário', "2021-04-13"),
 	('171270807-48','Samara','samara@gmail.com',' 40028922','05-03-2000','Cliente relata preferência por exercícios para o fortalecimento das costas', ' ', "2021-04-14"),
 	('171270807-49','Matheus','matheus@gmail.com',' 40028923','06-04-2001', ' ', ' ', "2021-04-15")

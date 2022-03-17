@@ -1,7 +1,10 @@
-<?php 
+<?php
+
     require_once('./usuario_crud.php');
 
+    
     if (
+        $_POST['txtID'] == NULL ||
         $_POST['txtNome'] == NULL ||
         $_POST['txtCpf'] == NULL ||
         $_POST['txtEmail'] == NULL ||
@@ -18,6 +21,7 @@
     }
 
     $usuario = new stdClass();
+    $usuario-> idUsuario = $_POST['txtID'];
     $usuario-> nome = $_POST['txtNome'];
     $usuario-> cpf = $_POST['txtCpf'];
     $usuario-> email = $_POST['txtEmail'];
@@ -26,12 +30,12 @@
     $usuario-> atestadoMedico = $_POST['txtAtestadoMedico'];
     $usuario-> comentario = $_POST['txtComentario'];
     $usuario-> dataInicio = $_POST['txtDataInicio'];
-   
-    
-    if(addUsuario($usuario)){
-        echo "Sucesso no cadastro";
+
+
+    if (atualizarUsuario($usuario)) {
+        header("location: usuario_lista.php?status=success");
         exit;
-    }else{
-        echo "Erro no cadastro";
+    } else {
+        header("location: usuario_edicao_form.php?status=fail");
         exit;
     }

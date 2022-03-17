@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <?php include_once "./navbar.php" ?>
     <div class="container">
         <table class="table table-stripped">
             <thead>
@@ -37,6 +38,10 @@
                         <td><?= $usuario->atestadoMedico ?></td>
                         <td><?= $usuario->comentario ?></td>
                         <td><?= $usuario->dataInicio ?></td>
+                        <td>
+                        <a href="usuario_edicao_form.php?idUsuario=<?= $usuario->id ?>"><span style="color: green;"><i class="fa-solid fa-pen-to-square"></i></span></a>
+                            <a href="usuario_apagar.php?idUsuario=<?= $usuario->id ?>" onclick="return confirm('Deseja realmente remover o usuário <?= $usuario->nome ?> ?')"><span style="color: red;"><i class="fa-solid fa-eraser"></i></span></a>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
