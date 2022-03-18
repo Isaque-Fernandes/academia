@@ -1,0 +1,39 @@
+section.backgroundcontainer div.background {
+    width: 100%;
+    height: auto;
+    /*background-color: #0d2406;*/
+    position: relative;
+}
+
+section.backgroundcontainer div.background div.caixacadastro {
+    /* text-align: center; /* necessarias as quatro últimas linhas!*/
+    width: 100%;
+    height: AUTO;
+    position: absolute;
+    top: 0px;
+    left: 0px; 
+    display: flex;
+    justify-content: center;
+    /*background-color: #2a7bcc;*/
+}
+
+section.backgroundcontainer div.background div.caixacadastro div.cadastrocliente {
+    width: 40%;
+    margin-top: 2%;
+    background-color: rgba(252, 253, 169, 0.781);
+}
+
+section.backgroundcontainer div.background div.caixacadastro div.cadastrocliente h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 2%;
+}
+
+section.backgroundcontainer div.background div.caixacadastro div.cadastrocliente p {
+    font-size: 20px;
+    margin-right: 15%;
+    margin-top: 2%;
+    text-align: right;
+}
+
+
