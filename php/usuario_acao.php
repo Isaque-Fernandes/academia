@@ -1,6 +1,6 @@
 <?php
 
-require_once('./usuario_crud.php');
+require_once './usuario_crud.php';
 
 session_start();
 

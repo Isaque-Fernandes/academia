@@ -1,5 +1,5 @@
 <?php
-require_once('./instrutor_acao.php');
+require_once("./instrutor_crud.php");
 
 // cpf, nomeInstrutor, dataNascimento, email, telefone, cidade, siglaUf, bairro, rua, numero, complemento
 if (
@@ -33,8 +33,8 @@ $instrutor->numero = $_POST['numero_txt'];
 $instrutor->complemento = $_POST['complemento_txt'];
 
 
-if (create($instrutor)) {
-    header("location: conexao.php?status=success");
+if (instrutorCreate($instrutor)) {
+    header("location: instrutor_redirecionador_listagem.php?status=success");
 
     exit;
 } else {

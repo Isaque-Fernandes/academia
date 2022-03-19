@@ -1,6 +1,6 @@
 <?php
 
-require_once('./instrutor_acao.php');
+require_once('./instrutor_crud.php');
 
 if ($_GET['idInstrutor'] == NULL) {
     header('location: erro.php?status=access-deny');
@@ -10,9 +10,9 @@ if ($_GET['idInstrutor'] == NULL) {
 $result = apagar($_GET['idInstrutor']);
 
 if ($result) {
-    header("location: instrutor_listagem.php?status=success");
+    header("location: instrutor_redirecionador_listagem.php?status=success");
     die();
 }
 
-header("location: instrutor_listagem.php?status=fail");
+header("location: instrutor_redirecionador_listagem.php?status=fail");
 die();

@@ -1,6 +1,6 @@
 <?php
 
-require_once './conexao.php';
+require_once("./conexao.php");
 
 
 // CRIAÇÃO DA FUNÇÃO addUsuario
@@ -9,18 +9,21 @@ function addUsuario($usuario)
     try {
         $con = getConnection();
 
-        $stmt = $con->prepare("INSERT INTO usuario(cpf, nome, email, telefone, dataNascimento, atestadoMedico, comentario, dataInicio) VALUES (:cpf, :nome, :email, :telefone, :dataNascimento, :atestadoMedico, :comentario, :dataInicio)");
+        $stmt = $con->prepare("INSERT INTO usuario
+        (cpf, nomeUsuario, email, telefone, dataNascimento, atestadoMedico, comentario, dataInicio) 
+        VALUES 
+        (:cpf, :nomeUsuario, :email, :telefone, :dataNascimento, :atestadoMedico, :comentario, :dataInicio)");
 
         $stmt->bindParam(":cpf", $usuario->cpf);
-        $stmt->bindParam(":nome", $usuario->nome);
+        $stmt->bindParam(":nomeUsuario", $usuario->nomeUsuario);
         $stmt->bindParam(":email", $usuario->email);
         $stmt->bindParam(":telefone", $usuario->telefone);
         $stmt->bindParam(":dataNascimento", $usuario->dataNascimento);
         $stmt->bindParam(":atestadoMedico", $usuario->atestadoMedico);
         $stmt->bindParam(":comentario", $usuario->comentario);
         $stmt->bindParam(":dataInicio", $usuario->dataInicio);
-       
-       
+
+
 
         if ($stmt->execute())
             return true;
@@ -55,39 +58,41 @@ function listarUsuario()
         unset($rs);
     }
 }
-function encontrarUsuario($nome)
-{
-    try {
-        $con = getConnection();
 
-        $stmt = $con->prepare("SELECT nome, cpf, email FROM usuario WHERE nome LIKE :nome");
-        $stmt->bindValue(":nome", "%{$nome}%");
 
-        if ($stmt->execute()) {
-            if ($stmt->rowCount() > 0) {
+// function encontrarUsuario($nome)
+// {
+//     try {
+//         $con = getConnection();
+
+//         $stmt = $con->prepare("SELECT nome, cpf, email FROM usuario WHERE nome LIKE :nome");
+//         $stmt->bindValue(":nome", "%{$nome}%");
+
+//         if ($stmt->execute()) {
+//             if ($stmt->rowCount() > 0) {
                 
-                $usuarios = array();
-                while ($usuario = $stmt->fetch(PDO::FETCH_OBJ)) {
-                    array_push($usuarios, $usuario);
-                }
+//                 $usuarios = array();
+//                 while ($usuario = $stmt->fetch(PDO::FETCH_OBJ)) {
+//                     array_push($usuarios, $usuario);
+//                 }
 
-                return $usuarios;
-            }
-        }
-    } catch (PDOException $error) {
-        echo "Erro encontrar o usuário'{$nome}'. Erro: {$error->getMessage()}";
-    } finally {
-        unset($con);
-        unset($stmt);
-    }
-}
+//                 return $usuarios;
+//             }
+//         }
+//     } catch (PDOException $error) {
+//         echo "Erro encontrar o usuário'{$nome}'. Erro: {$error->getMessage()}";
+//     } finally {
+//         unset($con);
+//         unset($stmt);
+//     }
+// }
 
 function findById($idUsuario)
 {
     try {
         $con = getConnection();
 
-        $stmt = $con->prepare("SELECT * FROM usuario WHERE id = :idUsuario");
+        $stmt = $con->prepare("SELECT * FROM usuario WHERE idUsuario = :idUsuario");
 
         $stmt->bindParam(":idUsuario", $idUsuario);
 
@@ -97,7 +102,7 @@ function findById($idUsuario)
             }
         }
     } catch (PDOException $erro) {
-        echo "Erro ao buscar o instrutor pelo id: '{$idInstrutor}'. Erro: {$erro->getMessage()}";
+        echo "Erro ao buscar o instrutor pelo id: '{$idUsuario}'. Erro: {$erro->getMessage()}";
     } finally {
         unset($con);
         unset($stmt);
@@ -109,10 +114,10 @@ function atualizarUsuario($usuario){
         try{
             $con = getConnection();
 
-            $stmt = $con->prepare("UPDATE usuario SET cpf = :cpf, nome = :nome, email=:email, telefone=:telefone, dataNascimento=:dataNascimento, atestadoMedico=:atestadoMedico, comentario=:comentario, dataInicio=:dataInicio WHERE id =:idUsuario ");
+            $stmt = $con->prepare("UPDATE usuario SET cpf = :cpf, nomeUsuario = :nomeUsuario, email=:email, telefone=:telefone, dataNascimento=:dataNascimento, atestadoMedico=:atestadoMedico, comentario=:comentario, dataInicio=:dataInicio WHERE idUsuario =:idUsuario ");
 
             $stmt->bindParam(":idUsuario", $usuario->idUsuario);
-            $stmt->bindParam(":nome", $usuario->nome);
+            $stmt->bindParam(":nomeUsuario", $usuario->nomeUsuario);
             $stmt->bindParam(":cpf", $usuario->cpf);
             $stmt->bindParam(":email", $usuario->email);
             $stmt->bindParam(":telefone", $usuario->telefone);
@@ -135,7 +140,7 @@ function deletarUsuario($idUsuario)
     try {
         $con = getConnection();
 
-        $stmt = $con->prepare("DELETE FROM usuario WHERE id =?");
+        $stmt = $con->prepare("DELETE FROM usuario WHERE idUsuario =?");
         $stmt->bindParam(1,$idUsuario);
         
 

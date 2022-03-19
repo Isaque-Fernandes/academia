@@ -1,6 +1,6 @@
 <?php
 require_once('./conexao.php');
-function create($instrutor)
+function instrutorCreate($instrutor)
 {
     try {
         $con = getConnection();
@@ -32,7 +32,7 @@ function create($instrutor)
     }
 }
 
-function get()
+function instrutorGET()
 {
     try {
         $con = getConnection();
@@ -51,6 +51,33 @@ function get()
     } finally {
         unset($con);
         unset($rs);
+    }
+}
+
+function instrutorFind($nomeInstrutor)
+{
+    try {
+        $con = getConnection();
+
+        $stmt = $con->prepare("SELECT  * FROM instrutor WHERE nomeInstrutor LIKE :nomeInstrutor");
+        $stmt->bindValue(":nomeInstrutor", "%{$nomeInstrutor}%");
+
+        if ($stmt->execute()) {
+            if ($stmt->rowCount() > 0) {
+
+                $instrutores = array();
+                while ($instrutor = $stmt->fetch(PDO::FETCH_OBJ)) {
+                    array_push($instrutores, $instrutor);
+                }
+
+                return $instrutores;
+            }
+        }
+    } catch (PDOException $error) {
+        echo "Erro ao buscar o nome '{$nomeInstrutor}'. Erro: {$error->getMessage()}";
+    } finally {
+        unset($con);
+        unset($stmt);
     }
 }
 

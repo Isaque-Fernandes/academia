@@ -10,9 +10,9 @@ if ($_GET['idUsuario'] == NULL) {
 $result = deletarUsuario($_GET['idUsuario']);
 
 if ($result) {
-    header("location: usuario_lista.php?status=success");
+    header("location: usuario_redirecionador_listagem.php?status=success");
     die();
 }
 
-header("location: usuario_lista.php?status=fail");
+header("location: usuario_redirecionador_listagem.php?status=fail");
 die();

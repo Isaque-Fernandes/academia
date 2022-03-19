@@ -1,18 +1,33 @@
 <?php
 
-    require_once('./usuario_acao.php');
+    require_once('./usuario_crud.php');
 
-    
+    // if (
+    //     $_POST['nomeUsuario_txt'] == NULL ||
+    //     $_POST['cpf_txt'] == NULL ||
+    //     $_POST['email_txt'] == NULL ||
+    //     $_POST['telefone_txt'] == NULL ||
+    //     $_POST['dataNascimento_txt'] == NULL ||
+    //     $_POST['atestadoMedico_txt'] == NULL ||
+    //     $_POST['comentario_txt'] == NULL ||
+    //     $_POST['dataInicio_txt'] == NULL 
+        
+
+    // ){
+    //     header('location: usuario_erro.php?status=access-deny');
+    //     die();
+    // }
+
     if (
-        $_POST['txtID'] == NULL ||
-        $_POST['txtNome'] == NULL ||
-        $_POST['txtCpf'] == NULL ||
-        $_POST['txtEmail'] == NULL ||
-        $_POST['txtTelefone'] == NULL ||
-        $_POST['txtDataNascimento'] == NULL ||
-        $_POST['txtAtestadoMedico'] == NULL ||
-        $_POST['txtComentario'] == NULL ||
-        $_POST['txtDataInicio'] == NULL 
+        $_POST['idUsuario_txt'] == NULL ||
+        $_POST['nomeUsuario_txt'] == NULL ||
+        $_POST['cpf_txt'] == NULL ||
+        $_POST['email_txt'] == NULL ||
+        $_POST['telefone_txt'] == NULL ||
+        $_POST['dataNascimento_txt'] == NULL ||
+        $_POST['atestadoMedico_txt'] == NULL ||
+        $_POST['comentario_txt'] == NULL ||
+        $_POST['dataInicio_txt'] == NULL
         
 
     ){
@@ -21,21 +36,21 @@
     }
 
     $usuario = new stdClass();
-    $usuario-> idUsuario = $_POST['txtID'];
-    $usuario-> nome = $_POST['txtNome'];
-    $usuario-> cpf = $_POST['txtCpf'];
-    $usuario-> email = $_POST['txtEmail'];
-    $usuario-> telefone = $_POST['txtTelefone'];
-    $usuario-> dataNascimento = $_POST['txtDataNascimento'];
-    $usuario-> atestadoMedico = $_POST['txtAtestadoMedico'];
-    $usuario-> comentario = $_POST['txtComentario'];
-    $usuario-> dataInicio = $_POST['txtDataInicio'];
+    $usuario-> idUsuario = $_POST['idUsuario_txt'];
+    $usuario-> nomeUsuario = $_POST['nomeUsuario_txt'];
+    $usuario-> cpf = $_POST['cpf_txt'];
+    $usuario-> email = $_POST['email_txt'];
+    $usuario-> telefone = $_POST['telefone_txt'];
+    $usuario-> dataNascimento = $_POST['dataNascimento_txt'];
+    $usuario-> atestadoMedico = $_POST['atestadoMedico_txt'];
+    $usuario-> comentario = $_POST['comentario_txt'];
+    $usuario-> dataInicio = $_POST['dataInicio_txt'];
 
 
     if (atualizarUsuario($usuario)) {
-        header("location: usuario_lista.php?status=success");
+        header("location: usuario_redirecionador_listagem.php?status=success");
         exit;
     } else {
-        header("location: usuario_edicao_form.php?status=fail");
+        header("location: usuario_edicao_formulario.php?status=fail");
         exit;
     }

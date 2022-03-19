@@ -1,6 +1,6 @@
 <?php
 
-require_once('./instrutor_acao.php');
+require_once('./instrutor_crud.php');
 
 if (
     $_POST['idInstrutor_txt'] == NULL ||
@@ -39,7 +39,7 @@ $instrutor->complemento = $_POST['complemento_txt'];
 
 
 if (update($instrutor)) {
-    header("location: instrutor_listagem.php?status=success");
+    header("location: instrutor_redirecionador_listagem.php?status=success");
     exit;
 } else {
     header("location: instrutor_edicao_formulario.php?status=fail");
