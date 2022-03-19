@@ -1,5 +1,4 @@
 <?php
-// require_once('./instrutor_acao.php');
 session_start();
 ?>
 
@@ -53,13 +52,13 @@ session_start();
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="./fichaTreino_formulario.php">Cadastro</a></li>
-                            <li><a class="dropdown-item" href="./fichaTreino_listagem.php">Listagem</a></li>
+                            <li><a class="dropdown-item" href="./fichaTreino_redirecionador_listagem.php">Listagem</a></li>
                         </ul>
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <input class="form-control me-2" name="instrutor_txt" type="search" placeholder="O que você procura?" aria-label="Search">
-                    <button class="btn btn-outline-success" formaction="./instrutor_busca.php" type="submit">Localizar</button>
+                    <input class="form-control me-2" name="fichaTreino_txt" type="search" placeholder="O que você procura?" aria-label="Search">
+                    <button class="btn btn-outline-success" formaction="./fichaTreino_busca.php" type="submit">Localizar</button>
                 </form>
             </div>
         </div>
@@ -69,39 +68,20 @@ session_start();
         <legend class="mt-3 mb-3">Listagem de Instrutores</legend>
         <table class="table table-stripped">
             <thead>
-                <th>ID</th>
-                <th>CPF</th>
-                <th>Nome</th>
-                <th>Data Nascimento</th>
-                <th>Email</th>
-                <th>Telefone</th>
-                <th>Nome Cidade</th>
-                <th>Sigla UF</th>
-                <th>Bairro</th>
-                <th>Rua</th>
-                <th>Número</th>
-                <th>Complemento</th>
+                <th>Nome do Usuário</th>
+                <th>Nome do Instrutor</th>
             </thead>
             <tbody>
-                <?php foreach ($_SESSION['instrutores'] as $instrutor) : ?>
+                <?php foreach ($_SESSION['fichaTreino'] as $fichaTreino) : ?>
                     <tr>
-                        <td><?= $instrutor->idInstrutor ?></td>
-                        <td><?= $instrutor->cpf ?></td>
-                        <td><?= $instrutor->nomeInstrutor ?></td>
-                        <td><?= $instrutor->dataNascimento ?></td>
-                        <td><?= $instrutor->email ?></td>
-                        <td><?= $instrutor->telefone ?></td>
-                        <td><?= $instrutor->cidade ?></td>
-                        <td><?= $instrutor->siglaUf ?></td>
-                        <td><?= $instrutor->bairro ?></td>
-                        <td><?= $instrutor->rua ?></td>
-                        <td><?= $instrutor->numero ?></td>
-                        <td><?= $instrutor->complemento ?></td>
+                        <td><?= $fichaTreino->nomeUsuario ?></td>
+                        <td><?= $fichaTreino->nomeInstrutor ?></td>
                         <td>
-                            <a href="instrutor_edicao_formulario.php?idInstrutor=<?= $instrutor->idInstrutor ?>"><span style="color: green;"><i class="fa-solid fa-pen-to-square"></i></span></a>
-                            <a href="instrutor_apagar.php?idInstrutor=<?= $instrutor->idInstrutor ?>" onclick="return confirm('Deseja realmente remover o instrutor <?= $instrutor->nomeInstrutor ?> ?')"><span style="color: red;"><i class="fa-solid fa-eraser"></i></span></a>
+                            <a href="fichaTreino_edicao_formulario.php?IdUsuarioTreino=<?= $fichaTreino->IdUsuarioTreino ?>"><span style="color: green;"><i class="fa-solid fa-pen-to-square"></i></span></a>
+                            <a href="fichaTreino_apagar.php?IdUsuarioTreino=<?= $fichaTreino->IdUsuarioTreino ?>" onclick="return confirm('Deseja realmente remover o instrutor <?= $fichaTreino->IdUsuarioTreino ?> ?')"><span style="color: red;"><i class="fa-solid fa-eraser"></i></span></a>
                         </td>
                     </tr>
+
                 <?php endforeach; ?>
 
             </tbody>

@@ -108,19 +108,6 @@ function update($instrutor)
     try {
         $con = getConnection();
 
-        // $stmt = $con->prepare("UPDATE consultaInstrutor SET
-        //  nomeInstrutor = :nomeInstrutor,
-        //  dataNascimento = :dataNascimento,
-        //  email = :email,
-        //  telefone = :telefone
-        //    WHERE idInstrutor = :idInstrutor");
-
-        // $stmt->bindParam(":idInstrutor", $instrutor->idInstrutor);
-        // $stmt->bindParam(":nomeInstrutor", $instrutor->nomeInstrutor);
-        // $stmt->bindParam(":dataNascimento", $instrutor->dataNascimento);
-        // $stmt->bindParam(":email", $instrutor->email);
-        // $stmt->bindParam(":telefone", $instrutor->telefone);
-
         $stmt = $con->prepare("UPDATE instrutor SET
          cpf = :cpf,
          nomeInstrutor = :nomeInstrutor,

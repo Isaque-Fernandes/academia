@@ -8,7 +8,7 @@ SET SQL_MODE = 'STRICT_ALL_TABLES';
 															
 CREATE TABLE usuario(
 	idUsuario INT AUTO_INCREMENT PRIMARY KEY,
-	cpf VARCHAR(255) NOT NULL UNIQUE,
+	cpf VARCHAR(255) NOT NULL ,
 	nomeUsuario VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
 	telefone VARCHAR(255) DEFAULT NULL,
@@ -18,7 +18,9 @@ CREATE TABLE usuario(
 	dataInicio DATE NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 INSERT INTO usuario (cpf, nomeUsuario, email, telefone, dataNascimento, atestadoMedico, comentario, dataInicio) VALUES
-	("LOREM", "FULANO", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "1999-02-04");
+	("LOREM", "SUJEITO", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "1999-02-04"),
+    	("LOREM", "INDIVÍDUO", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "1999-02-04"),
+         	("LOREM", "SUSPEITO", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "1999-02-04");
 SELECT * FROM usuario;
 
 
@@ -31,7 +33,7 @@ INSERT INTO categoria(nomeCategoria) VALUES
 	('INTERMEDIÁRIO');
 select * from categoria;
 
-
+/*
 CREATE TABLE treino(
 	idTreino INT AUTO_INCREMENT PRIMARY KEY,
 	id_categoria INT NOT NULL,
@@ -114,7 +116,7 @@ insert into treinoExercicio(id_categoria, id_treino, id_exercicio) values
 	(2, 2, 9),
 	(2, 2, 10);
 select * from treinoExercicio;
-
+*/
 
 create table instrutor(
 	idInstrutor INT AUTO_INCREMENT PRIMARY KEY,
@@ -132,23 +134,44 @@ create table instrutor(
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 SELECT * FROM instrutor;
 INSERT INTO instrutor(cpf, nomeInstrutor, dataNascimento, email, telefone, cidade, siglaUf, bairro, rua, numero, complemento) values
-("LOREM", "CICLANO", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", 0, "LOREM");
+("LOREM", "FULANO", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", 0, "LOREM"),
+("LOREM", "CICLANO", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", 0, "LOREM"),
+("LOREM", "MARCANO", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", 0, "LOREM");
  
-/*
+
 create table usuarioTreino(
 	IdUsuarioTreino INT AUTO_INCREMENT PRIMARY KEY,
 	id_usuario INT NOT NULL,
 	id_instrutor INT NOT NULL,
-	dataFim DATE NOT NULL, 
 	FOREIGN KEY (id_usuario) REFERENCES usuario(idUsuario) ON DELETE CASCADE,
 	FOREIGN KEY (id_instrutor) REFERENCES instrutor(idInstrutor) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-INSERT INTO usuarioTreino (id_usuario, id_instrutor, dataFim) VALUES
-	(1, 1,"2022-03-15");
-select * from usuarioTreino;
-*/
+/*INSERT INTO usuarioTreino (id_usuario, id_instrutor) VALUES
+	(1, 1),
+	(2, 1),
+    (3, 2);
+select * from usuarioTreino;*/
+
+select * from usuario;
+select * from instrutor;
 
 create or replace view fichaTreino as
+select 
+u.nomeUsuario,
+i.nomeInstrutor
+from usuario u
+join usuarioTreino ut
+on ut.id_usuario = u.idUsuario
+join instrutor i 
+on ut.id_instrutor = i.idInstrutor;
+select * from fichaTreino;
+
+select * from usuario;
+select * from instrutor;
+
+/*
+create 
+or replace view fichaTreino as
 select 
 c.nomeCategoria,
 t.nomeTreino,
@@ -161,7 +184,7 @@ on te.id_categoria  = c.idCategoria
 join exercicio e
 on te.id_exercicio = e.idExercicio;
 select * from fichaTreino;
-
+*/
 
 
 

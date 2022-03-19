@@ -51,7 +51,7 @@ session_start(); ?>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="./fichaTreino_formulario.php">Cadastro</a></li>
-                            <li><a class="dropdown-item" href="./fichaTreino_redirecionador_listagem.php">Listagem</a></li>
+                            <li><a class="dropdown-item" href="./fichaTreino_listagem.php">Listagem</a></li>
                         </ul>
                     </li>
                 </ul>
