@@ -78,9 +78,9 @@ session_start(); ?>
             <tbody>
                 <?php foreach ($_SESSION['usuarios'] as $usuario) : ?>
                     <tr>
-                        <td><?= $usuario->idUsuario ?></td>
+                        <td><?= $usuario->id ?></td>
                         <td><?= $usuario->cpf ?></td>
-                        <td><?= $usuario->nomeUsuario ?></td>
+                        <td><?= $usuario->nome ?></td>
                         <td><?= $usuario->email ?></td>
                         <td><?= $usuario->telefone ?></td>
                         <td><?= $usuario->dataNascimento ?></td>
