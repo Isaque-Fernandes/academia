@@ -60,32 +60,32 @@ function listarUsuario()
 }
 
 
-// function encontrarUsuario($nome)
-// {
-//     try {
-//         $con = getConnection();
+function usuarioFind($nomeUsuario)
+{
+    try {
+        $con = getConnection();
 
-//         $stmt = $con->prepare("SELECT nome, cpf, email FROM usuario WHERE nome LIKE :nome");
-//         $stmt->bindValue(":nome", "%{$nome}%");
+        $stmt = $con->prepare("SELECT * FROM usuario WHERE nomeUsuario LIKE :nomeUsuario");
+        $stmt->bindValue(":nomeUsuario", "%{$nomeUsuario}%");
 
-//         if ($stmt->execute()) {
-//             if ($stmt->rowCount() > 0) {
+        if ($stmt->execute()) {
+            if ($stmt->rowCount() > 0) {
                 
-//                 $usuarios = array();
-//                 while ($usuario = $stmt->fetch(PDO::FETCH_OBJ)) {
-//                     array_push($usuarios, $usuario);
-//                 }
+                $usuarios = array();
+                while ($usuario = $stmt->fetch(PDO::FETCH_OBJ)) {
+                    array_push($usuarios, $usuario);
+                }
 
-//                 return $usuarios;
-//             }
-//         }
-//     } catch (PDOException $error) {
-//         echo "Erro encontrar o usuário'{$nome}'. Erro: {$error->getMessage()}";
-//     } finally {
-//         unset($con);
-//         unset($stmt);
-//     }
-// }
+                return $usuarios;
+            }
+        }
+    } catch (PDOException $error) {
+        echo "Erro encontrar o usuário'{$nomeUsuario}'. Erro: {$error->getMessage()}";
+    } finally {
+        unset($con);
+        unset($stmt);
+    }
+}
 
 function findById($idUsuario)
 {
