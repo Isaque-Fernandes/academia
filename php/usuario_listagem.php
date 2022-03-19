@@ -62,10 +62,11 @@ session_start(); ?>
             </div>
         </div>
     </nav>
-    <div class="container">
+    <div class="container col-12">
+        <legend class="mt-3 mb-3">Listagem de Usuários</legend>
         <table class="table table-stripped">
             <thead>
-                <th>#</th>
+                <th>ID</th>
                 <th>CPF</th>
                 <th>Nome</th>
                 <th>Email</th>

@@ -77,8 +77,8 @@ session_start();
                         <td><?= $fichaTreino->nomeUsuario ?></td>
                         <td><?= $fichaTreino->nomeInstrutor ?></td>
                         <td>
-                            <a href="fichaTreino_edicao_formulario.php?IdUsuarioTreino=<?= $fichaTreino->IdUsuarioTreino ?>"><span style="color: green;"><i class="fa-solid fa-pen-to-square"></i></span></a>
-                            <a href="fichaTreino_apagar.php?IdUsuarioTreino=<?= $fichaTreino->IdUsuarioTreino ?>" onclick="return confirm('Deseja realmente remover o instrutor <?= $fichaTreino->IdUsuarioTreino ?> ?')"><span style="color: red;"><i class="fa-solid fa-eraser"></i></span></a>
+                            <a href="fichaTreino_edicao_formulario.php?idUsuarioTreino=<?= $fichaTreino->idUsuarioTreino ?>"><span style="color: green;"><i class="fa-solid fa-pen-to-square"></i></span></a>
+                            <a href="fichaTreino_apagar.php?idUsuarioTreino=<?= $fichaTreino->idUsuarioTreino ?>" onclick="return confirm('Deseja realmente remover o instrutor <?= $fichaTreino->idUsuarioTreino ?> ?')"><span style="color: red;"><i class="fa-solid fa-eraser"></i></span></a>
                         </td>
                     </tr>
 

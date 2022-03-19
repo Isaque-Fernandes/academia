@@ -78,14 +78,14 @@ function fichaTreinoFind($nomeUsuario)
 }
 
 
-function findById($IdUsuarioTreino)
+function findById($idUsuarioTreino)
 {
     try {
         $con = getConnection();
 
-        $stmt = $con->prepare("SELECT * FROM usuarioTreino WHERE IdUsuarioTreino = :IdUsuarioTreino");
+        $stmt = $con->prepare("SELECT * FROM usuarioTreino WHERE idUsuarioTreino = :idUsuarioTreino");
 
-        $stmt->bindParam(":IdUsuarioTreino", $IdUsuarioTreino);
+        $stmt->bindParam(":idUsuarioTreino", $idUsuarioTreino);
 
         if ($stmt->execute()) {
             if ($stmt->rowCount() > 0) {
@@ -93,7 +93,7 @@ function findById($IdUsuarioTreino)
             }
         }
     } catch (PDOException $erro) {
-        echo "Erro ao buscar o instrutor pelo id: '{$IdUsuarioTreino}'. Erro: {$erro->getMessage()}";
+        echo "Erro ao buscar o instrutor pelo id: '{$idUsuarioTreino}'. Erro: {$erro->getMessage()}";
     } finally {
         unset($con);
         unset($stmt);
@@ -109,9 +109,9 @@ function update($fichaTreino)
          id_usuario = :id_usuario,
          id_instrutor = :id_instrutor
   
-           WHERE IdUsuarioTreino = :IdUsuarioTreino ");
+           WHERE idUsuarioTreino = :idUsuarioTreino ");
 
-        $stmt->bindParam(":IdUsuarioTreino", $fichaTreino->IdUsuarioTreino);
+        $stmt->bindParam(":idUsuarioTreino", $fichaTreino->idUsuarioTreino);
         $stmt->bindParam(":id_usuario", $fichaTreino->id_usuario);
         $stmt->bindParam(":id_instrutor", $fichaTreino->id_instrutor);
 
@@ -127,13 +127,13 @@ function update($fichaTreino)
 }
 
 
-function apagar($IdUsuarioTreino)
+function apagar($idUsuarioTreino)
 {
     try {
         $con = getConnection();
 
-        $stmt = $con->prepare("DELETE FROM usuarioTreino WHERE IdUsuarioTreino = ?");
-        $stmt->bindParam(1, $IdUsuarioTreino);
+        $stmt = $con->prepare("DELETE FROM usuarioTreino WHERE idUsuarioTreino = ?");
+        $stmt->bindParam(1, $idUsuarioTreino);
 
         if ($stmt->execute())
             return true;

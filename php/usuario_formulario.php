@@ -54,7 +54,7 @@
             </div>
         </div>
     </nav>
-    <div class="container col-6">
+    <div class="container col-12">
         <fieldset>
             <legend>Cadastro de Usuário</legend>
             <form action="./usuario_registro.php" method="post">

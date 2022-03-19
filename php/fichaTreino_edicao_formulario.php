@@ -1,6 +1,6 @@
 <?php
 require_once('./fichaTreino_acao.php');
-$instrutor = findById($_GET["IdUsuarioTreino"]);
+$instrutor = findById($_GET["idUsuarioTreino"]);
 
 
 ?>
@@ -78,7 +78,7 @@ $instrutor = findById($_GET["IdUsuarioTreino"]);
                     <input class="form-control" type="number" name="id_instrutor_txt" id="id_instrutor_id" placeholder="Informe o nome da cidade" value="<?= $fichaTreino->id_instrutor ?>" required>
                 </div>
 
-                <button class="btn btn-dark" type="submit" name="IdUsuarioTreino_txt" value="<?= $fichaTreino->IdUsuarioTreino ?>">Editar</button>
+                <button class="btn btn-dark" type="submit" name="idUsuarioTreino_txt" value="<?= $fichaTreino->idUsuarioTreino ?>">Editar</button>
             </form>
         </fieldset>
     </div>
