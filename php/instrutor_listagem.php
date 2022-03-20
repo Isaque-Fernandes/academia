@@ -1,7 +1,16 @@
 <?php
-// require_once('./instrutor_acao.php');
 session_start();
+// unset($_SESSION['email']);
+// unset($_SESSION['senha']);
+// header('Location: cadastro_formulario.php');
+
+// session_start();
+if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true)) {
+    header('Location: cadastro_formulario.php');
+}
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -47,19 +56,12 @@ session_start();
                             <li><a class="dropdown-item" href="./usuario_listagem.php">Lista</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Ficha Treino
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="./fichaTreino_formulario.php">Cadastro</a></li>
-                            <li><a class="dropdown-item" href="./fichaTreino_listagem.php">Listagem</a></li>
-                        </ul>
-                    </li>
+
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" name="instrutor_txt" type="search" placeholder="O que você procura?" aria-label="Search">
-                    <button class="btn btn-outline-success" formaction="./instrutor_busca.php" type="submit">Localizar</button>
+                    <button class="btn btn-success" formaction="./instrutor_busca.php" type="submit">Localizar</button>
+                    <button class="btn btn-danger" formaction="./cadastro_sair.php" type="submit">Deslogar</button>
                 </form>
             </div>
         </div>
