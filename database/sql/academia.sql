@@ -47,11 +47,8 @@ select * from instrutor;
 
 create table cadastro (
 id int auto_increment primary key,
-email varchar(255),
-senha varchar(255)
+email varchar(255) not null,
+senha varchar(255) not null
 );
-
-insert into cadastro (email, senha)values
-("admin", "123");
-
-select * from cadastro;
+insert into cadastro (email,senha)values 
+("admin@email.com", "123");

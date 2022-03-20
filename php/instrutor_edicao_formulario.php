@@ -65,47 +65,47 @@ $instrutor = findById($_GET["idInstrutor"]);
             <form action="./instrutor_edicao.php" method="post">
                 <div class="form-group mb-3">
                     <label for="cpf_id" class="form-label">cpf</label>
-                    <input class="form-control" type="text" name="cpf_txt" id="cpf_id" placeholder="Informe o nome da cidade" value="<?= $instrutor->cpf ?>" required>
+                    <input class="form-control" type="text" name="cpf_txt" id="cpf_id" placeholder="Informe o nome do cpf" value="<?= $instrutor->cpf ?>" required>
                 </div>
                 <div class="form-group mb-3">
                     <label for="nomeInstrutor_id" class="form-label">nomeInstrutor</label>
-                    <input class="form-control" type="text" name="nomeInstrutor_txt" id="nomeInstrutor_id" placeholder="Informe o nome da cidade" value="<?= $instrutor->nomeInstrutor ?>" required>
+                    <input class="form-control" type="text" name="nomeInstrutor_txt" id="nomeInstrutor_id"  value="<?= $instrutor->nomeInstrutor ?>" required>
                 </div>
                 <div class="form-group mb-3">
                     <label for="dataNascimento_id" class="form-label">dataNascimento</label>
-                    <input class="form-control" type="text" name="dataNascimento_txt" id="dataNascimento_id" placeholder="Informe o nome da cidade" value="<?= $instrutor->dataNascimento ?>" required>
+                    <input class="form-control" type="date" name="dataNascimento_txt" id="dataNascimento_id"  value="<?= $instrutor->dataNascimento ?>" required>
                 </div>
                 <div class="form-group mb-3">
                     <label for="email_id" class="form-label">email</label>
-                    <input class="form-control" type="text" name="email_txt" id="email_id" placeholder="Informe o nome da cidade" value="<?= $instrutor->email ?>" required>
+                    <input class="form-control" type="text" name="email_txt" id="email_id"  value="<?= $instrutor->email ?>" required>
                 </div>
                 <div class="form-group mb-3">
                     <label for="telefone_id" class="form-label">telefone</label>
-                    <input class="form-control" type="text" name="telefone_txt" id="telefone_id" placeholder="Informe o nome da cidade" value="<?= $instrutor->telefone ?>" required>
+                    <input class="form-control" type="text" name="telefone_txt" id="telefone_id"  value="<?= $instrutor->telefone ?>" required>
                 </div>
                 <div class="form-group mb-3">
                     <label for="cidade_id" class="form-label">cidade</label>
-                    <input class="form-control" type="text" name="cidade_txt" id="cidade_id" placeholder="Informe o nome da cidade" value="<?= $instrutor->cidade ?>" required>
+                    <input class="form-control" type="text" name="cidade_txt" id="cidade_id"  value="<?= $instrutor->cidade ?>" required>
                 </div>
                 <div class="form-group mb-3">
                     <label for="siglaUf_id" class="form-label">siglaUf</label>
-                    <input class="form-control" type="text" name="siglaUf_txt" id="siglaUf_id" placeholder="Informe o nome da cidade" value="<?= $instrutor->siglaUf ?>" required>
+                    <input class="form-control" type="text" name="siglaUf_txt" id="siglaUf_id"  value="<?= $instrutor->siglaUf ?>" required>
                 </div>
                 <div class="form-group mb-3">
                     <label for="bairro_id" class="form-label">bairro</label>
-                    <input class="form-control" type="text" name="bairro_txt" id="bairro_id" placeholder="Informe o nome da cidade" value="<?= $instrutor->bairro ?>" required>
+                    <input class="form-control" type="text" name="bairro_txt" id="bairro_id"  value="<?= $instrutor->bairro ?>" required>
                 </div>
                 <div class="form-group mb-3">
                     <label for="rua_id" class="form-label">rua</label>
-                    <input class="form-control" type="text" name="rua_txt" id="rua_id" placeholder="Informe o nome da cidade" value="<?= $instrutor->rua ?>" required>
+                    <input class="form-control" type="text" name="rua_txt" id="rua_id"  value="<?= $instrutor->rua ?>" required>
                 </div>
                 <div class="form-group mb-3">
                     <label for="numero_id" class="form-label">numero</label>
-                    <input class="form-control" type="text" name="numero_txt" id="numero_id" placeholder="Informe o nome da cidade" value="<?= $instrutor->numero ?>" required>
+                    <input class="form-control" type="text" name="numero_txt" id="numero_id"  value="<?= $instrutor->numero ?>" required>
                 </div>
                 <div class="form-group mb-3">
                     <label for="complemento_id" class="form-label">complemento</label>
-                    <input class="form-control" type="text" name="complemento_txt" id="complemento_id" placeholder="Informe o nome da cidade" value="<?= $instrutor->complemento ?>" required>
+                    <input class="form-control" type="text" name="complemento_txt" id="complemento_id"  value="<?= $instrutor->complemento ?>" required>
                 </div>
 
                 <button class="btn btn-dark" type="submit" name="idInstrutor_txt" value="<?= $instrutor->idInstrutor ?>">Editar</button>
