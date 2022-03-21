@@ -107,7 +107,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Standard Fit</h5>
                         <p class="card-text">Os Melhores Equipamentos, no Melhor Lugar Para Treinar!</p>
-                        <a href="#" class="btn btn-primary"></a>
+                        <a href="#" class="btn btn-primary">Início</a>
                     </div>
                 </div>
             </div>
