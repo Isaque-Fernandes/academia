@@ -54,15 +54,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
                             <li ><a class="dropdown-item text-light" href="./usuario_redirecionador_listagem.php">Lista</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Ficha Treino
-                        </a>
-                        <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item text-light" href="./fichaTreino_formulario.php">Cadastro</a></li>
-                            <li><a class="dropdown-item text-light" href="./fichaTreino_listagem.php">Listagem</a></li>
-                        </ul>
-                    </li>
+                    
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" name="instrutor_txt" type="search" placeholder="O que você procura?" aria-label="Search">
