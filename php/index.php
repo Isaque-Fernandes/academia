@@ -116,6 +116,15 @@
 
     <!-- FIM CAIXA MOTIVACIONAL-->
 
+    <footer>
+        <div class="container-footer">
+            <div class="text" style="margin:auto;">
+
+                <p style="text-align:center">&copy;Todos os Direitos Reservados</p>
+            </div>
+        </div>
+    </footer>
+
 
 
 

@@ -57,10 +57,10 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
                         </a>
                         <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item text-light" href="./usuario_formulario.php">Cadastro</a></li>
-                            <li ><a class="dropdown-item text-light" href="./usuario_redirecionador_listagem.php">Lista</a></li>
+                            <li><a class="dropdown-item text-light" href="./usuario_redirecionador_listagem.php">Lista</a></li>
                         </ul>
                     </li>
-                    
+
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" name="instrutor_txt" type="search" placeholder="O que você procura?" aria-label="Search">
@@ -69,16 +69,15 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
                 </form>
             </div>
         </div>
-</nav>
-<!-- FIM DO NAVBAR -->
+    </nav>
+    <!-- FIM DO NAVBAR -->
 
 
-<section class="backgroundcontainer">
+    <section class="backgroundcontainer">
         <div class="background">
             <!-- IMAGEM BACKGROUND -->
             <style>
-                body
-                {
+                body {
                     background: url('../img/1.jpg') no-repeat;
                 }
             </style>
@@ -87,73 +86,60 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
 
 
 
-    <div class="container col-12">
-        <legend class="mt-3 mb-3">Listagem de Instrutores</legend>
-        <table class="table table-stripped">
-            <thead>
-                <th>ID</th>
-                <th>CPF</th>
-                <th>Nome</th>
-                <th>Data Nascimento</th>
-                <th>Email</th>
-                <th>Telefone</th>
-                <th>Nome Cidade</th>
-                <th>Sigla UF</th>
-                <th>Bairro</th>
-                <th>Rua</th>
-                <th>Número</th>
-                <th>Complemento</th>
-            </thead>
-            <tbody>
-                <?php foreach ($_SESSION['instrutores'] as $instrutor) : ?>
-                    <tr>
-                        <td><?= $instrutor->idInstrutor ?></td>
-                        <td><?= $instrutor->cpf ?></td>
-                        <td><?= $instrutor->nomeInstrutor ?></td>
-                        <td><?= $instrutor->dataNascimento ?></td>
-                        <td><?= $instrutor->email ?></td>
-                        <td><?= $instrutor->telefone ?></td>
-                        <td><?= $instrutor->cidade ?></td>
-                        <td><?= $instrutor->siglaUf ?></td>
-                        <td><?= $instrutor->bairro ?></td>
-                        <td><?= $instrutor->rua ?></td>
-                        <td><?= $instrutor->numero ?></td>
-                        <td><?= $instrutor->complemento ?></td>
-                        <td>
-                            <a href="instrutor_edicao_formulario.php?idInstrutor=<?= $instrutor->idInstrutor ?>"><span style="color: green;"><i class="fa-solid fa-pen-to-square"></i></span></a>
-                            <a href="instrutor_apagar.php?idInstrutor=<?= $instrutor->idInstrutor ?>" onclick="return confirm('Deseja realmente remover o instrutor <?= $instrutor->nomeInstrutor ?> ?')"><span style="color: red;"><i class="fa-solid fa-eraser"></i></span></a>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
+            <div class="container col-12">
+                <legend class="mt-3 mb-3">Listagem de Instrutores</legend>
+                <table class="table table-stripped">
+                    <thead>
+                        <th>ID</th>
+                        <th>CPF</th>
+                        <th>Nome</th>
+                        <th>Data Nascimento</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th>Nome Cidade</th>
+                        <th>Sigla UF</th>
+                        <th>Bairro</th>
+                        <th>Rua</th>
+                        <th>Número</th>
+                        <th>Complemento</th>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($_SESSION['instrutores'] as $instrutor) : ?>
+                            <tr>
+                                <td><?= $instrutor->idInstrutor ?></td>
+                                <td><?= $instrutor->cpf ?></td>
+                                <td><?= $instrutor->nomeInstrutor ?></td>
+                                <td><?= $instrutor->dataNascimento ?></td>
+                                <td><?= $instrutor->email ?></td>
+                                <td><?= $instrutor->telefone ?></td>
+                                <td><?= $instrutor->cidade ?></td>
+                                <td><?= $instrutor->siglaUf ?></td>
+                                <td><?= $instrutor->bairro ?></td>
+                                <td><?= $instrutor->rua ?></td>
+                                <td><?= $instrutor->numero ?></td>
+                                <td><?= $instrutor->complemento ?></td>
+                                <td>
+                                    <a href="instrutor_edicao_formulario.php?idInstrutor=<?= $instrutor->idInstrutor ?>"><span style="color: green;"><i class="fa-solid fa-pen-to-square"></i></span></a>
+                                    <a href="instrutor_apagar.php?idInstrutor=<?= $instrutor->idInstrutor ?>" onclick="return confirm('Deseja realmente remover o instrutor <?= $instrutor->nomeInstrutor ?> ?')"><span style="color: red;"><i class="fa-solid fa-eraser"></i></span></a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
 
-            </tbody>
-        </table>
-    </div>
-    </div>
-</section>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 
     <!-- INICIO FOOTER -->
-<footer>
-    <div class="container-footer">
-        <div class="text text-1">
-            <ul>
-                <li><h2>Instrutor</h2></li>
-                <li><a href="./instrutor_formulario.php">Cadastro</a></li>
-                <li><a href="./instrutor_listagem.php">Lista</a></li>
-            </ul>
+    <footer>
+        <div class="container-footer">
+            <div class="text" style="margin:auto;">
+
+                <p style="text-align:center">&copy;Todos os Direitos Reservados</p>
+            </div>
         </div>
-        <div class="text_img">
-                <a href="./index.php"><img src="../img/logo1.png" height="100px" alt="logomarca"></a>
-        </div>
-        <div class="text">
-            <ul>
-                <li><h2>Usuario</h2></li>
-                <li><a href="./usuario_formulario.php">Cadastro</a></li>
-                <li><a href="./usuario_listagem.php">Lista</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <!-- FIM DO FOOTER -->
 

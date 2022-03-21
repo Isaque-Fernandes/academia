@@ -27,8 +27,8 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
 
 <body>
     <!-- cpf, nomeInstrutor, dataNascimento,  email, telefone -->
-        <!-- INÍCIO NAVBAR -->
-<nav class="navbar navbar-expand-md navbar-light bg-dark">
+    <!-- INÍCIO NAVBAR -->
+    <nav class="navbar navbar-expand-md navbar-light bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.php"><img src="../img/logo1.png" alt="..." height="100px"></a>
             <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,10 +55,10 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
                         </a>
                         <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item text-light" href="./usuario_formulario.php">Cadastro</a></li>
-                            <li ><a class="dropdown-item text-light" href="./usuario_redirecionador_listagem.php">Lista</a></li>
+                            <li><a class="dropdown-item text-light" href="./usuario_redirecionador_listagem.php">Lista</a></li>
                         </ul>
                     </li>
-                    
+
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" name="instrutor_txt" type="search" placeholder="O que você procura?" aria-label="Search">
@@ -67,18 +67,17 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
                 </form>
             </div>
         </div>
-</nav>
-<!-- FIM DO NAVBAR -->
+    </nav>
+    <!-- FIM DO NAVBAR -->
 
-<!-- INICIO MEIO DO SITE -->
-<section class="backgroundcontainer">
+    <!-- INICIO MEIO DO SITE -->
+    <section class="backgroundcontainer">
         <div class="background">
 
 
             <!-- IMAGEM BACKGROUND -->
             <style>
-                body
-                {
+                body {
                     background: url('../img/8bg-login.jpg') no-repeat;
                 }
             </style>
@@ -91,42 +90,43 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
             <!--FORMULÁRIO DE CADASTRO-->
             <div class="caixamae">
                 <div class="login-page">
-                <div class="form">
+                    <div class="form">
 
 
-                    <legend>Cadastro de Usuário</legend>
-            
-                    <form class="register-form" action="./instrutor_registro.php" method="post">
+                        <legend>Cadastro de Usuário</legend>
 
-                        <input type="text" name="cpf_txt" id="cpf_id" placeholder="CPF" required>
-                        <input  type="text" name="nomeInstrutor_txt" id="nomeInstrutor_id" placeholder="Informe o Nome" required>
-                        <input  type="date" name="dataNascimento_txt" id="dataNascimento_id" placeholder="Data Nascimento" required>
+                        <form class="register-form" action="./instrutor_registro.php" method="post">
 
-                        <legend>Contato</legend>
-                        <input  type="text" name="email_txt" id="email_id" placeholder="Informe o Email" required>
-                        <input  type="text" name="telefone_txt" id="telefone_id" placeholder="Informe o Telefone" required>
+                            <input type="text" name="cpf_txt" id="cpf_id" placeholder="CPF" required>
+                            <input type="text" name="nomeInstrutor_txt" id="nomeInstrutor_id" placeholder="Informe o Nome" required>
+                            <input type="date" name="dataNascimento_txt" id="dataNascimento_id" placeholder="Data Nascimento" required>
 
-                        <legend>Endereço</legend>
-                        <input type="text" name="cidade_txt" id="cidade_id" placeholder="Informe a Cidade" required>
-                        <input type="text" name="siglaUf_txt" id="siglaUf_id" placeholder="Informe a Sigla UF" required>
-                        <input  type="text" name="bairro_txt" id="bairro_id" placeholder="Informe o Bairro" required>
-                        <input  type="text" name="rua_txt" id="rua_id" placeholder="Informe a Rua" required>
-                        <input  type="number" name="numero_txt" id="numero_id" placeholder="Informe o Número da Residência" required>
-                        <input  type="text" name="complemento_txt" id="complemento_id" placeholder="Informe o Complemento" required>
-              
-                        
+                            <legend>Contato</legend>
+                            <input type="text" name="email_txt" id="email_id" placeholder="Informe o Email" required>
+                            <input type="text" name="telefone_txt" id="telefone_id" placeholder="Informe o Telefone" required>
 
-                        <!-- <button class="btn btn-dark" type="submit">Cadastrar</button> -->
-                        <button class="btn btn-dark" type="submit" name="botao_txt">Cadastrar</button>
-                    </form>
+                            <legend>Endereço</legend>
+                            <input type="text" name="cidade_txt" id="cidade_id" placeholder="Informe a Cidade" required>
+                            <input type="text" name="siglaUf_txt" id="siglaUf_id" placeholder="Informe a Sigla UF" required>
+                            <input type="text" name="bairro_txt" id="bairro_id" placeholder="Informe o Bairro" required>
+                            <input type="text" name="rua_txt" id="rua_id" placeholder="Informe a Rua" required>
+                            <input type="number" name="numero_txt" id="numero_id" placeholder="Informe o Número da Residência" required>
+                            <input type="text" name="complemento_txt" id="complemento_id" placeholder="Informe o Complemento" required>
+
+
+
+                            <!-- <button class="btn btn-dark" type="submit">Cadastrar</button> -->
+                            <button class="btn btn-dark" type="submit" name="botao_txt">Cadastrar</button>
+                        </form>
+                    </div>
                 </div>
-                </div>
-            </div>              <!--FIM FORMULÁRIO DE CADASTRO-->
+            </div>
+            <!--FIM FORMULÁRIO DE CADASTRO-->
         </div>
     </section>
-<!-- FIM MEIO DO SITE -->
+    <!-- FIM MEIO DO SITE -->
 
-<!--
+    <!--
     <div class="container col-12">
         <fieldset>
             <legend>Cadastro de Instrutor</legend>
@@ -183,24 +183,11 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
     </div>     -->
 
     <!-- INICIO FOOTER -->
-<footer>
+    <footer>
         <div class="container-footer">
-            <div class="text text-1">
-                <ul>
-                    <li><h2>Instrutor</h2></li>
-                    <li><a href="./instrutor_formulario.php">Cadastro</a></li>
-                    <li><a href="./instrutor_listagem.php">Lista</a></li>
-                </ul>
-            </div>
-            <div class="text_img">
-                <a href="./index.php"><img src="../img/logo1.png" height="100px" alt="logomarca"></a>
-            </div>
-            <div class="text">
-                <ul>
-                    <li><h2>Usuario</h2></li>
-                    <li><a href="./usuario_formulario.php">Cadastro</a></li>
-                    <li><a href="./usuario_listagem.php">Lista</a></li>
-                </ul>
+            <div class="text" style="margin:auto;">
+
+                <p style="text-align:center">&copy;Todos os Direitos Reservados</p>
             </div>
         </div>
     </footer>
