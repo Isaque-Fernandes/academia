@@ -1,7 +1,7 @@
 <?php
 require_once("./instrutor_crud.php");
 
-// cpf, nomeInstrutor, dataNascimento, email, telefone, cidade, siglaUf, bairro, rua, numero, complemento
+
 if (
     $_POST['cpf_txt'] == NULL ||
     $_POST['nomeInstrutor_txt'] == NULL ||

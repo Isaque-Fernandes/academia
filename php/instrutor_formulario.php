@@ -1,11 +1,7 @@
 <?php
 
 session_start();
-// unset($_SESSION['email']);
-// unset($_SESSION['senha']);
-// header('Location: cadastro_formulario.php');
 
-// session_start();
 if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true)) {
     header('Location: cadastro_formulario.php');
 }

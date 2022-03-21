@@ -2,21 +2,7 @@
 
     require_once('./usuario_crud.php');
 
-    // if (
-    //     $_POST['nomeUsuario_txt'] == NULL ||
-    //     $_POST['cpf_txt'] == NULL ||
-    //     $_POST['email_txt'] == NULL ||
-    //     $_POST['telefone_txt'] == NULL ||
-    //     $_POST['dataNascimento_txt'] == NULL ||
-    //     $_POST['atestadoMedico_txt'] == NULL ||
-    //     $_POST['comentario_txt'] == NULL ||
-    //     $_POST['dataInicio_txt'] == NULL 
-        
 
-    // ){
-    //     header('location: usuario_erro.php?status=access-deny');
-    //     die();
-    // }
 
     if (
         $_POST['idUsuario_txt'] == NULL ||
