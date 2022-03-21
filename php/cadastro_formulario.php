@@ -15,7 +15,7 @@
 
 <body>
 
-  
+
     <nav class="navbar navbar-expand-md navbar-light bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.php"><img src="../img/logo1.png" alt="..." height="100px"></a>
@@ -56,20 +56,20 @@
             </div>
         </div>
     </nav>
-  
+
 
 
     <section class="backgroundcontainer">
         <div class="background">
 
 
- 
+
             <style>
                 body {
                     background: url('../img/6.jpg') no-repeat;
                 }
             </style>
-     
+
 
             <div class="caixamae">
                 <div class="login-page">
@@ -88,10 +88,9 @@
                     </div>
                 </div>
             </div>
-         
+
         </div>
     </section>
-   
 
 
 
@@ -99,7 +98,8 @@
 
 
 
-  
+
+
 
 
     <footer>

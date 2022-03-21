@@ -9,7 +9,6 @@ if (isset($_GET['idInstrutores']) && !empty($_GET['idInstrutores']) && $_GET['id
     $_SESSION['instrutores'] = findById($_GET['idInstrutores']);
 } elseif (isset($_GET['instrutor_txt']) && !empty($_GET['instrutor_txt']) && $_GET['instrutor_txt'] != NULL) {
     $_SESSION['instrutores'] = instrutorFind($_GET['instrutor_txt']);
-    
 } else {
     $_SESSION['instrutores'] = instrutorGET();
 }

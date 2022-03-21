@@ -19,23 +19,24 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
     <link rel="stylesheet" type="text/css" href="../css/usuarioformulario.css" />
     <title>Document</title>
 </head>
+
 <body style=" background-color:whitesmoke;">
 
 
-<section class="backgroundcontainer">
+    <section class="backgroundcontainer">
         <div class="background">
-        <div class="caixamae">
+            <div class="caixamae">
                 <div class="login-page">
-                <div class="form">
-    <legend>Acesso Permitido</legend>
-</div>
-</div>
-</div>
-</div>
-</section>
+                    <div class="form">
+                        <legend>Acesso Permitido</legend>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    
- 
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 

@@ -22,7 +22,7 @@ $instrutor = findById($_GET["idInstrutor"]);
 
 <body>
 
-   
+
     <nav class="navbar navbar-expand-md navbar-light bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.php"><img src="../img/logo1.png" alt="..." height="100px"></a>
@@ -65,52 +65,51 @@ $instrutor = findById($_GET["idInstrutor"]);
     </nav>
 
 
- 
-<section class="backgroundcontainer">
+
+    <section class="backgroundcontainer">
         <div class="background">
 
 
-     
+
             <style>
-                body
-                {
+                body {
                     background: url('../img/10bg-cadastro.jpg') no-repeat;
                 }
             </style>
-          
 
 
 
 
 
-         
+
+
             <div class="caixamae">
                 <div class="login-page">
-                <div class="form">
+                    <div class="form">
 
 
-                    <legend>Edição de Dados - Instrutor</legend>
-            
-                    <form class="register-form" action="./instrutor_edicao.php" method="post">
+                        <legend>Edição de Dados - Instrutor</legend>
 
-                    <input type="text" name="cpf_txt" id="cpf_id" placeholder="Informe o nome do cpf" value="<?= $instrutor->cpf ?>" required>
-                    <input type="text" name="nomeInstrutor_txt" id="nomeInstrutor_id"  value="<?= $instrutor->nomeInstrutor ?>" required>
-                    <input type="date" name="dataNascimento_txt" id="dataNascimento_id"  value="<?= $instrutor->dataNascimento ?>" required>
-                    <input type="text" name="email_txt" id="email_id"  value="<?= $instrutor->email ?>" required>
-                    <input type="text" name="telefone_txt" id="telefone_id"  value="<?= $instrutor->telefone ?>" required>
-                    <input type="text" name="cidade_txt" id="cidade_id"  value="<?= $instrutor->cidade ?>" required>
-                    <input type="text" name="siglaUf_txt" id="siglaUf_id"  value="<?= $instrutor->siglaUf ?>" required>
-                    <input type="text" name="bairro_txt" id="bairro_id"  value="<?= $instrutor->bairro ?>" required>
-                    <input type="text" name="rua_txt" id="rua_id"  value="<?= $instrutor->rua ?>" required>
-                    <input type="text" name="numero_txt" id="numero_id"  value="<?= $instrutor->numero ?>" required>
-                    <input type="text" name="complemento_txt" id="complemento_id"  value="<?= $instrutor->complemento ?>" required>
+                        <form class="register-form" action="./instrutor_edicao.php" method="post">
 
-                       
-                        <button type="submit" name="idInstrutor_txt" value="<?= $instrutor->idInstrutor ?>">Editar</button>
-                    </form>
+                            <input type="text" name="cpf_txt" id="cpf_id" placeholder="Informe o nome do cpf" value="<?= $instrutor->cpf ?>" required>
+                            <input type="text" name="nomeInstrutor_txt" id="nomeInstrutor_id" value="<?= $instrutor->nomeInstrutor ?>" required>
+                            <input type="date" name="dataNascimento_txt" id="dataNascimento_id" value="<?= $instrutor->dataNascimento ?>" required>
+                            <input type="text" name="email_txt" id="email_id" value="<?= $instrutor->email ?>" required>
+                            <input type="text" name="telefone_txt" id="telefone_id" value="<?= $instrutor->telefone ?>" required>
+                            <input type="text" name="cidade_txt" id="cidade_id" value="<?= $instrutor->cidade ?>" required>
+                            <input type="text" name="siglaUf_txt" id="siglaUf_id" value="<?= $instrutor->siglaUf ?>" required>
+                            <input type="text" name="bairro_txt" id="bairro_id" value="<?= $instrutor->bairro ?>" required>
+                            <input type="text" name="rua_txt" id="rua_id" value="<?= $instrutor->rua ?>" required>
+                            <input type="text" name="numero_txt" id="numero_id" value="<?= $instrutor->numero ?>" required>
+                            <input type="text" name="complemento_txt" id="complemento_id" value="<?= $instrutor->complemento ?>" required>
+
+
+                            <button type="submit" name="idInstrutor_txt" value="<?= $instrutor->idInstrutor ?>">Editar</button>
+                        </form>
+                    </div>
                 </div>
-                </div>
-            </div>             
+            </div>
         </div>
     </section>
 

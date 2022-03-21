@@ -1,3 +1,3 @@
 <?php
-    $status = $_GET['status'];
-    echo $status;
+$status = $_GET['status'];
+echo $status;

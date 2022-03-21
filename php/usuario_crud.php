@@ -69,7 +69,7 @@ function usuarioFind($nomeUsuario)
 
         if ($stmt->execute()) {
             if ($stmt->rowCount() > 0) {
-                
+
                 $usuarios = array();
                 while ($usuario = $stmt->fetch(PDO::FETCH_OBJ)) {
                     array_push($usuarios, $usuario);
@@ -109,30 +109,31 @@ function findById($idUsuario)
 }
 
 
-function atualizarUsuario($usuario){
-        try{
-            $con = getConnection();
+function atualizarUsuario($usuario)
+{
+    try {
+        $con = getConnection();
 
-            $stmt = $con->prepare("UPDATE usuario SET cpf = :cpf, nomeUsuario = :nomeUsuario, email=:email, telefone=:telefone, dataNascimento=:dataNascimento, atestadoMedico=:atestadoMedico, comentario=:comentario, dataInicio=:dataInicio WHERE idUsuario =:idUsuario ");
+        $stmt = $con->prepare("UPDATE usuario SET cpf = :cpf, nomeUsuario = :nomeUsuario, email=:email, telefone=:telefone, dataNascimento=:dataNascimento, atestadoMedico=:atestadoMedico, comentario=:comentario, dataInicio=:dataInicio WHERE idUsuario =:idUsuario ");
 
-            $stmt->bindParam(":idUsuario", $usuario->idUsuario);
-            $stmt->bindParam(":nomeUsuario", $usuario->nomeUsuario);
-            $stmt->bindParam(":cpf", $usuario->cpf);
-            $stmt->bindParam(":email", $usuario->email);
-            $stmt->bindParam(":telefone", $usuario->telefone);
-            $stmt->bindParam(":atestadoMedico", $usuario->atestadoMedico);
-            $stmt->bindParam(":comentario", $usuario->comentario);
-            $stmt->bindParam(":dataNascimento", $usuario->dataNascimento);
-            $stmt->bindParam(":dataInicio", $usuario->dataInicio);
+        $stmt->bindParam(":idUsuario", $usuario->idUsuario);
+        $stmt->bindParam(":nomeUsuario", $usuario->nomeUsuario);
+        $stmt->bindParam(":cpf", $usuario->cpf);
+        $stmt->bindParam(":email", $usuario->email);
+        $stmt->bindParam(":telefone", $usuario->telefone);
+        $stmt->bindParam(":atestadoMedico", $usuario->atestadoMedico);
+        $stmt->bindParam(":comentario", $usuario->comentario);
+        $stmt->bindParam(":dataNascimento", $usuario->dataNascimento);
+        $stmt->bindParam(":dataInicio", $usuario->dataInicio);
 
-            if ($stmt->execute())
-                return true;
-            } catch (PDOException $error) {
-                return false;
-            } finally {
-                unset($con);
-                unset($stmt);
-            }
+        if ($stmt->execute())
+            return true;
+    } catch (PDOException $error) {
+        return false;
+    } finally {
+        unset($con);
+        unset($stmt);
+    }
 }
 function deletarUsuario($idUsuario)
 {
@@ -140,8 +141,8 @@ function deletarUsuario($idUsuario)
         $con = getConnection();
 
         $stmt = $con->prepare("DELETE FROM usuario WHERE idUsuario =?");
-        $stmt->bindParam(1,$idUsuario);
-        
+        $stmt->bindParam(1, $idUsuario);
+
 
         if ($stmt->execute())
             return true;

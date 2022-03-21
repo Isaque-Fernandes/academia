@@ -66,18 +66,18 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
             </div>
         </div>
     </nav>
-   
+
 
 
     <section class="backgroundcontainer">
         <div class="background">
-          
+
             <style>
                 body {
                     background: url('../img/1.jpg') no-repeat;
                 }
             </style>
-    
+
 
 
 
@@ -137,7 +137,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
         </div>
     </footer>
 
- 
+
 
 
 

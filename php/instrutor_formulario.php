@@ -22,7 +22,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
 </head>
 
 <body>
-   
+
     <nav class="navbar navbar-expand-md navbar-light bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.php"><img src="../img/logo1.png" alt="..." height="100px"></a>
@@ -63,18 +63,18 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
             </div>
         </div>
     </nav>
- 
+
     <section class="backgroundcontainer">
         <div class="background">
 
 
-         
+
             <style>
                 body {
                     background: url('../img/8bg-login.jpg') no-repeat;
                 }
             </style>
-        
+
             <div class="caixamae">
                 <div class="login-page">
                     <div class="form">
@@ -102,16 +102,16 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
 
 
 
-                         
+
                             <button class="btn btn-dark" type="submit" name="botao_txt">Cadastrar</button>
                         </form>
                     </div>
                 </div>
             </div>
-          
+
         </div>
     </section>
-   
+
     <footer>
         <div class="container-footer">
             <div class="text" style="margin:auto;">
@@ -121,7 +121,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
         </div>
     </footer>
 
- 
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

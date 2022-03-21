@@ -27,10 +27,5 @@ if (isset($_POST['botao_txt']) && !empty($_POST['email_txt']) && !empty($_POST['
         $_SESSION['senha'] = $senha;
         header('Location: cadastro_sistema.php');
     }
-
-
-
-
 } else {
 }
-

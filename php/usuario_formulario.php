@@ -22,8 +22,8 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
 </head>
 
 <body>
-    
-<nav class="navbar navbar-expand-md navbar-light bg-dark">
+
+    <nav class="navbar navbar-expand-md navbar-light bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.php"><img src="../img/logo1.png" alt="..." height="100px"></a>
             <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,10 +50,10 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
                         </a>
                         <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item text-light" href="./usuario_formulario.php">Cadastro</a></li>
-                            <li ><a class="dropdown-item text-light" href="./usuario_redirecionador_listagem.php">Lista</a></li>
+                            <li><a class="dropdown-item text-light" href="./usuario_redirecionador_listagem.php">Lista</a></li>
                         </ul>
                     </li>
-                    
+
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" name="instrutor_txt" type="search" placeholder="O que você procura?" aria-label="Search">
@@ -62,54 +62,53 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
                 </form>
             </div>
         </div>
-</nav>
+    </nav>
 
     <section class="backgroundcontainer">
         <div class="background">
 
 
             <style>
-                body
-                {
+                body {
                     background: url('../img/10bg-cadastro.jpg') no-repeat;
                 }
             </style>
-         
+
             <div class="caixamae">
                 <div class="login-page">
-                <div class="form">
+                    <div class="form">
 
 
-                    <legend>Cadastro de Usuário</legend>
-            
-                    <form class="register-form" action="./usuario_registro.php" method="post">
+                        <legend>Cadastro de Usuário</legend>
 
-                        <input type="text" name="cpf_txt" id="cpf_id" placeholder="CPF" required>
-                        <input  type="text" name="nomeUsuario_txt" id="nomeUsuario_id" placeholder="Informe o Nome" required>
-                        <input  type="date" name="dataNascimento_txt" id="dataNascimento_id" placeholder="Data Nascimento" required>
+                        <form class="register-form" action="./usuario_registro.php" method="post">
 
-                        <legend>Contato</legend>
-                        <input  type="text" name="email_txt" id="email_id" placeholder="Informe o Email" required>
-                        <input  type="text" name="telefone_txt" id="telefone_id" placeholder="Informe o Telefone" required>
+                            <input type="text" name="cpf_txt" id="cpf_id" placeholder="CPF" required>
+                            <input type="text" name="nomeUsuario_txt" id="nomeUsuario_id" placeholder="Informe o Nome" required>
+                            <input type="date" name="dataNascimento_txt" id="dataNascimento_id" placeholder="Data Nascimento" required>
 
-                        <legend>Opcional</legend>
-                        <input  type="text" name="atestadoMedico_txt" id="atestadoMedico_id" placeholder="Informe o Atestado Médico" required>
-                        <input  type="text" name="comentario_txt" id="comentario_id" placeholder="Informe o Comentário" required>
+                            <legend>Contato</legend>
+                            <input type="text" name="email_txt" id="email_id" placeholder="Informe o Email" required>
+                            <input type="text" name="telefone_txt" id="telefone_id" placeholder="Informe o Telefone" required>
 
-                        <legend>Data de Início</legend>
-                        <input  type="date" name="dataInicio_txt" id="dataInicio_id" placeholder="Data de Início" required>
+                            <legend>Opcional</legend>
+                            <input type="text" name="atestadoMedico_txt" id="atestadoMedico_id" placeholder="Informe o Atestado Médico" required>
+                            <input type="text" name="comentario_txt" id="comentario_id" placeholder="Informe o Comentário" required>
 
-                     
-                        <button class="btn btn-dark" type="submit" name="botao_txt">Cadastrar</button>
-                    </form>
+                            <legend>Data de Início</legend>
+                            <input type="date" name="dataInicio_txt" id="dataInicio_id" placeholder="Data de Início" required>
+
+
+                            <button class="btn btn-dark" type="submit" name="botao_txt">Cadastrar</button>
+                        </form>
+                    </div>
                 </div>
-                </div>
-            </div>              
+            </div>
         </div>
     </section>
 
-<footer>
-<div class="container-footer">
+    <footer>
+        <div class="container-footer">
             <div class="text" style="margin:auto;">
 
                 <p style="text-align:center">&copy;Todos os Direitos Reservados</p>
