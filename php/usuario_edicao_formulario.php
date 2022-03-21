@@ -60,49 +60,54 @@ $usuario = findById($_GET["idUsuario"]);
         </div>
     </nav>
     <!-- FIM DO NAVBAR -->
-    <div class="container col-12">
-        <fieldset>
-            <legend>Edição de Dados - Usuário</legend>
-            <form action="./usuario_edicao.php" method="post">
-                <div class="form-group mb-3">
-                    <label for="nomeUsuario_id" class="form-label">Nome</label>
-                    <input class="form-control" type="text" name="nomeUsuario_txt" id="nomeUsuario_id" placeholder="Informe o Nome" value="<?= $usuario->nomeUsuario ?>" required>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="cpf_id" class="form-label">CPF</label>
-                    <input class="form-control" type="text" name="cpf_txt" id="cpf_id" placeholder="Informe o cpf" value="<?= $usuario->cpf ?>" required>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="email_id" class="form-label">Email</label>
-                    <input class="form-control" type="text" name="email_txt" id="email_id" placeholder="Informe o email" value="<?= $usuario->email ?>" required>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="telefone_id" class="form-label">Telefone</label>
-                    <input class="form-control" type="text" name="telefone_txt" id="telefone_id" placeholder="Informe o Telefone" value="<?= $usuario->telefone ?>" required>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="dataNascimento_id" class="form-label">Data de nascimento</label>
-                    <input class="form-control" type="text" name="dataNascimento_txt" id="dataNascimento_id" placeholder="Informe a Data de nascimento" value="<?= $usuario->dataNascimento ?>" required>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="atestadoMedico_id" class="form-label">Atestado Médico</label>
-                    <input class="form-control" type="text" name="atestadoMedico_txt" id="atestadoMedico_id" placeholder="Informe o Atestado Médico" value="<?= $usuario->atestadoMedico ?>" required>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="comentario_id" class="form-label">Comentário</label>
-                    <input class="form-control" type="text" name="comentario_txt" id="comentario_id" placeholder="Informe o comentario" value="<?= $usuario->comentario ?>" required>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="dataInicio_id" class="form-label">Data Início</label>
-                    <input class="form-control" type="text" name="dataInicio_txt" id="dataInicio_id" placeholder="Informe o Data Início" value="<?= $usuario->dataInicio ?>" required>
-                </div>
+    <!-- INICIO MEIO DO SITE -->
+<section class="backgroundcontainer">
+        <div class="background">
+
+
+            <!-- IMAGEM BACKGROUND -->
+            <style>
+                body
+                {
+                    background: url('../img/10bg-cadastro.jpg') no-repeat;
+                }
+            </style>
+            <!-- FIM IMAGEM BACKGROUND -->
 
 
 
-                <button class="btn btn-dark" type="submit" name="idUsuario_txt" value="<?= $usuario->idUsuario ?>">Editar</button>
-            </form>
-        </fieldset>
-    </div>
+
+
+            <!--FORMULÁRIO DE CADASTRO-->
+            <div class="caixamae">
+                <div class="login-page">
+                <div class="form">
+
+
+                    <legend>Edição de Dados - Usuário</legend>
+            
+                    <form class="register-form" action="./usuario_edicao.php" method="post">
+
+                    <input type="text" name="nomeUsuario_txt" id="nomeUsuario_id" placeholder="Informe o Nome" value="<?= $usuario->nomeUsuario ?>" required>
+                    <input type="text" name="cpf_txt" id="cpf_id" placeholder="Informe o cpf" value="<?= $usuario->cpf ?>" required>
+                    <input type="text" name="email_txt" id="email_id" placeholder="Informe o email" value="<?= $usuario->email ?>" required>
+                    <input type="text" name="telefone_txt" id="telefone_id" placeholder="Informe o Telefone" value="<?= $usuario->telefone ?>" required>
+                    <input type="text" name="dataNascimento_txt" id="dataNascimento_id" placeholder="Informe a Data de nascimento" value="<?= $usuario->dataNascimento ?>" required>
+                    <input type="text" name="atestadoMedico_txt" id="atestadoMedico_id" placeholder="Informe o Atestado Médico" value="<?= $usuario->atestadoMedico ?>" required>
+                    <input type="text" name="comentario_txt" id="comentario_id" placeholder="Informe o comentario" value="<?= $usuario->comentario ?>" required>
+
+                    <input type="text" name="dataInicio_txt" id="dataInicio_id" placeholder="Informe o Data Início" value="<?= $usuario->dataInicio ?>" required>
+       
+
+                        <!-- <button class="btn btn-dark" type="submit">Cadastrar</button> -->
+                        <button type="submit" name="idUsuario_txt" value="<?= $usuario->idUsuario ?>">Editar</button>
+                    </form>
+                </div>
+                </div>
+            </div>              <!--FIM FORMULÁRIO DE CADASTRO-->
+        </div>
+    </section>
+<!-- FIM MEIO DO SITE -->
 
     <footer>
         <div class="container-footer">
