@@ -17,10 +17,10 @@ CREATE TABLE usuario(
 	comentario VARCHAR(255) DEFAULT NULL,
 	dataInicio DATE NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-INSERT INTO usuario (cpf, nomeUsuario, email, telefone, dataNascimento, atestadoMedico, comentario, dataInicio) VALUES
+/*INSERT INTO usuario (cpf, nomeUsuario, email, telefone, dataNascimento, atestadoMedico, comentario, dataInicio) VALUES
 	("LOREM", "SUJEITO", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "1999-02-04"),
     	("LOREM", "INDIVÍDUO", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "1999-02-04"),
-         	("LOREM", "SUSPEITO", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "1999-02-04");
+         	("LOREM", "SUSPEITO", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "1999-02-04");*/
 SELECT * FROM usuario;
 
 
@@ -38,12 +38,12 @@ create table instrutor(
 	numero INT NOT NULL,
 	complemento VARCHAR(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-SELECT * FROM instrutor;
-INSERT INTO instrutor(cpf, nomeInstrutor, dataNascimento, email, telefone, cidade, siglaUf, bairro, rua, numero, complemento) values
+/*INSERT INTO instrutor(cpf, nomeInstrutor, dataNascimento, email, telefone, cidade, siglaUf, bairro, rua, numero, complemento) values
 ("LOREM", "FULANO", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", 0, "LOREM"),
 ("LOREM", "CICLANO", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", 0, "LOREM"),
-("LOREM", "MARCANO", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", 0, "LOREM");
+("LOREM", "MARCANO", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", 0, "LOREM");*/
 select * from instrutor;
+
 
 create table cadastro (
 id int auto_increment primary key,
