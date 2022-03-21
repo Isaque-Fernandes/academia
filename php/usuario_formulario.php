@@ -17,16 +17,19 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../resources/css/style.css" rel="stylesheet"/>
-    <link href="../resources/css/footer.css" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/usuarioformulario.css" />
+    <link rel="stylesheet" type="text/css" href="../css/footer.css" />
     <title>Cadastro Usuários</title>
+
 </head>
 
 <body>
+ <!-- INÍCIO NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="./index.php"><img src="../resources/img/logo1.png" alt="..." height="100px"></a>
+            <a class="navbar-brand" href="./index.php"><img src="../img/logo1.png" alt="..." height="100px"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -61,53 +64,67 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
                     <button class="btn btn-success" formaction="#" type="submit">Localizar</button>
                     <button class="btn btn-danger" formaction="./cadastro_sair.php" type="submit">Deslogar</button>
                 </form>
-            </nav>
-    <div class="container col-12">
-        <fieldset>
-            <legend>Cadastro de Usuário</legend>
-            <form action="./usuario_registro.php" method="post">
-                <div class="form-group mb-3">
-                    <label for="cpf_id" class="form-label">CPF</label>
-                    <input class="form-control" type="text" name="cpf_txt" id="cpf_id" placeholder="CPF" required>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="nomeUsuario_id" class="form-label">Nome</label>
-                    <input class="form-control" type="text" name="nomeUsuario_txt" id="nomeUsuario_id" placeholder="Informe o Nome" required>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="dataNascimento_id" class="form-label">Data de Nascimento</label>
-                    <input class="form-control" type="date" name="dataNascimento_txt" id="dataNascimento_id" required>
-                </div>
-                <legend>Contato</legend>
-                <div class="form-group mb-3">
-                    <label for="email_id" class="form-label">Email</label>
-                    <input class="form-control" type="text" name="email_txt" id="email_id" placeholder="Informe o Email" required>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="telefone_id" class="form-label">Telefone</label>
-                    <input class="form-control" type="text" name="telefone_txt" id="telefone_id" placeholder="Informe o Telefone" required>
-                </div>
-                <legend>Opcional</legend>
-                <div class="form-group mb-3">
-                    <label for="atestadoMedico_id" class="form-label">Atestado Médico</label>
-                    <input class="form-control" type="text" name="atestadoMedico_txt" id="atestadoMedico_id" placeholder="Informe o Atestado Médico">
-                </div>
-                <div class="form-group mb-3">
-                    <label for="comentario_id" class="form-label">Comentário</label>
-                    <input class="form-control" type="text" name="comentario_txt" id="comentario_id" placeholder="Informe o Comentário">
-                </div>
-                <div class="form-group mb-3">
-                    <label for="dataInicio_id" class="form-label">Data de início</label>
-                    <input class="form-control" type="date" name="dataInicio_txt" id="dataInicio_id" required>
-                </div>
+            </div>
+        </div>
+</nav>
+<!-- FIM DO NAVBAR -->
+    
+
+<!-- INICIO MEIO DO SITE -->
+    <section class="backgroundcontainer">
+        <div class="background">
+
+
+            <!-- IMAGEM BACKGROUND -->
+            <style>
+                body
+                {
+                    background: url('../img/10bg-cadastro.jpg') no-repeat;
+                }
+            </style>
+            <!-- FIM IMAGEM BACKGROUND -->
 
 
 
-                <button class="btn btn-dark" type="submit">Cadastrar</button>
-            </form>
-        </fieldset>
-    </div>
-    <footer>
+
+
+            <!--FORMULÁRIO DE CADASTRO-->
+            <div class="caixamae">
+                <div class="login-page">
+                <div class="form">
+
+
+                    <legend>Cadastro de Usuário</legend>
+            
+                    <form class="register-form" action="./usuario_registro.php" method="post">
+
+                        <input type="text" name="cpf_txt" id="cpf_id" placeholder="CPF" required>
+                        <input  type="text" name="nomeUsuario_txt" id="nomeUsuario_id" placeholder="Informe o Nome" required>
+                        <input  type="date" name="dataNascimento_txt" id="dataNascimento_id" placeholder="Data Nascimento" required>
+
+                        <legend>Contato</legend>
+                        <input  type="text" name="email_txt" id="email_id" placeholder="Informe o Email" required>
+                        <input  type="text" name="telefone_txt" id="telefone_id" placeholder="Informe o Telefone" required>
+
+                        <legend>Opcional</legend>
+                        <input  type="text" name="atestadoMedico_txt" id="atestadoMedico_id" placeholder="Informe o Atestado Médico" required>
+                        <input  type="text" name="comentario_txt" id="comentario_id" placeholder="Informe o Comentário" required>
+
+                        <legend>Data de Início</legend>
+                        <input  type="date" name="dataInicio_txt" id="dataInicio_id" placeholder="Data de Início" required>
+
+                        <!-- <button class="btn btn-dark" type="submit">Cadastrar</button> -->
+                        <button>create</button>
+                    </form>
+                </div>
+                </div>
+            </div>              <!--FIM FORMULÁRIO DE CADASTRO-->
+        </div>
+    </section>
+<!-- FIM MEIO DO SITE -->
+
+<!-- INICIO FOOTER -->
+<footer>
         <div class="container-footer">
             <div class="text text-1">
                 <ul>
@@ -117,7 +134,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
                 </ul>
             </div>
             <div class="text_img">
-                <a href="./index.php"><img src="../resources/img/logo1.png" alt="logomarca"></a>
+                <a href="./index.php"><img src="../img/logo1.png" height="100px" alt="logomarca"></a>
             </div>
             <div class="text">
                 <ul>
@@ -129,7 +146,12 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
         </div>
     </footer>
 
+    <!-- FIM DO FOOTER -->
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
+
 
 </html>
