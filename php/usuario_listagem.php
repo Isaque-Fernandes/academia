@@ -22,6 +22,8 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <link rel="stylesheet" type="text/css" href="../css/listagem.css" />
     <link rel="stylesheet" type="text/css" href="../css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="../css/footer.listagem.css" />
+
     <title>Listagem de Usuários</title>
 </head>
 
@@ -110,7 +112,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
                         <td><?= $usuario->comentario ?></td>
                         <td><?= $usuario->dataInicio ?></td>
                         <td>
-                            <a href="usuario_edicao_formulario.php?idUsuario=<?= $usuario->idUsuario ?>"><span style="color: green;"><i class="fa-solid fa-pen-to-square"></i></span></a>
+                            <a href="usuario_edicao_formulario.php?idUsuario=<?= $usuario->idUsuario ?>"><span style="color: white;"><i class="fa-solid fa-pen-to-square"></i></span></a>
                             <a href="usuario_apagar.php?idUsuario=<?= $usuario->idUsuario ?>" onclick="return confirm('Deseja realmente remover o usuário <?= $usuario->nomeUsuario ?> ?')"><span style="color: red;"><i class="fa-solid fa-eraser"></i></span></a>
                         </td>
                     </tr>

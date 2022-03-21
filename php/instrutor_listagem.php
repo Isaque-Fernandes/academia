@@ -119,7 +119,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
                                 <td><?= $instrutor->numero ?></td>
                                 <td><?= $instrutor->complemento ?></td>
                                 <td>
-                                    <a href="instrutor_edicao_formulario.php?idInstrutor=<?= $instrutor->idInstrutor ?>"><span style="color: green;"><i class="fa-solid fa-pen-to-square"></i></span></a>
+                                    <a href="instrutor_edicao_formulario.php?idInstrutor=<?= $instrutor->idInstrutor ?>"><span style="color: white;"><i class="fa-solid fa-pen-to-square"></i></span></a>
                                     <a href="instrutor_apagar.php?idInstrutor=<?= $instrutor->idInstrutor ?>" onclick="return confirm('Deseja realmente remover o instrutor <?= $instrutor->nomeInstrutor ?> ?')"><span style="color: red;"><i class="fa-solid fa-eraser"></i></span></a>
                                 </td>
                             </tr>
