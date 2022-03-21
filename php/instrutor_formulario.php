@@ -120,6 +120,31 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
         </fieldset>
     </div>
 
+    <!-- INICIO FOOTER -->
+<footer>
+        <div class="container-footer">
+            <div class="text text-1">
+                <ul>
+                    <li><h2>Instrutor</h2></li>
+                    <li><a href="./instrutor_formulario.php">Cadastro</a></li>
+                    <li><a href="./instrutor_listagem.php">Lista</a></li>
+                </ul>
+            </div>
+            <div class="text_img">
+                <a href="./index.php"><img src="../img/logo1.png" height="100px" alt="logomarca"></a>
+            </div>
+            <div class="text">
+                <ul>
+                    <li><h2>Usuario</h2></li>
+                    <li><a href="./usuario_formulario.php">Cadastro</a></li>
+                    <li><a href="./usuario_listagem.php">Lista</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FIM DO FOOTER -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 

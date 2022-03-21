@@ -53,7 +53,30 @@
     </nav>
 
    
-    <h1>Olá Mundo</h1>
+   <!-- INICIO FOOTER -->
+<footer>
+        <div class="container-footer">
+            <div class="text text-1">
+                <ul>
+                    <li><h2>Instrutor</h2></li>
+                    <li><a href="./instrutor_formulario.php">Cadastro</a></li>
+                    <li><a href="./instrutor_listagem.php">Lista</a></li>
+                </ul>
+            </div>
+            <div class="text_img">
+                <a href="./index.php"><img src="../img/logo1.png" height="100px" alt="logomarca"></a>
+            </div>
+            <div class="text">
+                <ul>
+                    <li><h2>Usuario</h2></li>
+                    <li><a href="./usuario_formulario.php">Cadastro</a></li>
+                    <li><a href="./usuario_listagem.php">Lista</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FIM DO FOOTER -->
 
 
 
