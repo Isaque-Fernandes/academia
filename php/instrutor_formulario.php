@@ -99,7 +99,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
                     <form class="register-form" action="./instrutor_registro.php" method="post">
 
                         <input type="text" name="cpf_txt" id="cpf_id" placeholder="CPF" required>
-                        <input  type="text" name="nomeUsuario_txt" id="nomeUsuario_id" placeholder="Informe o Nome" required>
+                        <input  type="text" name="nomeInstrutor_txt" id="nomeInstrutor_id" placeholder="Informe o Nome" required>
                         <input  type="date" name="dataNascimento_txt" id="dataNascimento_id" placeholder="Data Nascimento" required>
 
                         <legend>Contato</legend>
@@ -117,7 +117,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
                         
 
                         <!-- <button class="btn btn-dark" type="submit">Cadastrar</button> -->
-                        <button>create</button>
+                        <button class="btn btn-dark" type="submit" name="botao_txt">Cadastrar</button>
                     </form>
                 </div>
                 </div>

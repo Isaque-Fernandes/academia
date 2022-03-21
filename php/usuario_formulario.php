@@ -114,7 +114,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
                         <input  type="date" name="dataInicio_txt" id="dataInicio_id" placeholder="Data de Início" required>
 
                         <!-- <button class="btn btn-dark" type="submit">Cadastrar</button> -->
-                        <button>create</button>
+                        <button class="btn btn-dark" type="submit" name="botao_txt">Cadastrar</button>
                     </form>
                 </div>
                 </div>
