@@ -96,7 +96,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
 
                     <legend>Cadastro de Usuário</legend>
             
-                    <form class="register-form" action="./usuario_registro.php" method="post">
+                    <form class="register-form" action="./instrutor_registro.php" method="post">
 
                         <input type="text" name="cpf_txt" id="cpf_id" placeholder="CPF" required>
                         <input  type="text" name="nomeUsuario_txt" id="nomeUsuario_id" placeholder="Informe o Nome" required>
