@@ -43,10 +43,10 @@
                         </a>
                         <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item text-light" href="./usuario_formulario.php">Cadastro</a></li>
-                            <li ><a class="dropdown-item text-light" href="./usuario_redirecionador_listagem.php">Lista</a></li>
+                            <li><a class="dropdown-item text-light" href="./usuario_redirecionador_listagem.php">Lista</a></li>
                         </ul>
                     </li>
-                    
+
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" name="instrutor_txt" type="search" placeholder="O que você procura?" aria-label="Search">
@@ -55,20 +55,19 @@
                 </form>
             </div>
         </div>
-</nav>
-<!-- FIM DO NAVBAR -->
+    </nav>
+    <!-- FIM DO NAVBAR -->
 
 
 
-<!-- INICIO MEIO DO SITE -->
-<section class="backgroundcontainer">
+    <!-- INICIO MEIO DO SITE -->
+    <section class="backgroundcontainer">
         <div class="background">
 
 
             <!-- IMAGEM BACKGROUND -->
             <style>
-                body
-                {
+                body {
                     background: url('../img/6.jpg') no-repeat;
                 }
             </style>
@@ -76,55 +75,46 @@
 
             <div class="caixamae">
                 <div class="login-page">
-                <div class="form">
+                    <div class="form">
 
 
-                    <legend>Acesso Restrito</legend>
+                        <legend>Acesso Restrito</legend>
 
-                    <form class="register-form" action="./cadastro_teste.php" method="post">
-                        
+                        <form class="register-form" action="./cadastro_teste.php" method="post">
 
-                        <input type="text" name="email_txt" id="email_id" placeholder="Digite Seu Email" required>
-                        <input  type="password" name="senha_txt" id="senha_id" placeholder="Informe sua Senha" required>
-                        <button class="btn btn-dark" type="submit" name="botao_txt">Entrar</button>
-                    </form>
+
+                            <input type="text" name="email_txt" id="email_id" placeholder="Digite Seu Email" required>
+                            <input type="password" name="senha_txt" id="senha_id" placeholder="Informe sua Senha" required>
+                            <button class="btn btn-dark" type="submit" name="botao_txt">Entrar</button>
+                        </form>
+                    </div>
                 </div>
-                </div>
-            </div>              <!--FIM FORMULÁRIO DE CADASTRO-->
+            </div>
+            <!--FIM FORMULÁRIO DE CADASTRO-->
         </div>
-</section>
-<!-- FIM MEIO DO SITE -->
+    </section>
+    <!-- FIM MEIO DO SITE -->
 
 
 
 
-       
 
 
-        <!-- INICIO FOOTER -->
-<footer>
-    <div class="container-footer">
-        <div class="text text-1">
-            <ul>
-                <li><h2>Instrutor</h2></li>
-                <li><a href="./instrutor_formulario.php">Cadastro</a></li>
-                <li><a href="./instrutor_listagem.php">Lista</a></li>
-            </ul>
+
+    <!-- INICIO FOOTER -->
+
+
+    <footer>
+        <div class="container-footer">
+            <div class="text" style="margin:auto;">
+
+                <p style="text-align:center">&copy;Todos os Direitos Reservados</p>
+            </div>
         </div>
-        <div class="text_img">
-            <a href="./index.php"><img src="../img/logo1.png" height="100px" alt="logomarca"></a>
-        </div>
-        <div class="text">
-            <ul>
-                <li><h2>Usuario</h2></li>
-                <li><a href="./usuario_formulario.php">Cadastro</a></li>
-                <li><a href="./usuario_listagem.php">Lista</a></li>
-             </ul>
-        </div>
-    </div>
-</footer>
+    </footer>
 
-<!-- FIM DO FOOTER -->
+
+    <!-- FIM DO FOOTER -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </body>
