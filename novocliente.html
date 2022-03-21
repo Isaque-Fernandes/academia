@@ -12,7 +12,7 @@
         
 
     <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="resources/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/novocliente.css" />
 
     <title>Standard Fit</title>
 </head>                                                                      <!--FIM DA HEAD-->
@@ -32,16 +32,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Meus Treinos</a>
+            <a class="nav-link active" aria-current="page" href="#">Nossos Planos</a>
           </li>
           <li class="nav-item ms-3">
-            <a class="nav-link" href="#">Novo Cadastro</a>
+            <a class="nav-link" href="#">Meus Treinos</a>
           </li>
           <li class="nav-item ms-3">
-            <a class="nav-link" href="#">Meu Cadastro</a>
+            <a class="nav-link" href="#">Contato</a>
           </li>
           <li class="nav-item ms-4">
-            <a class="nav-link" href="#">Logado como: </a>
+            <a class="nav-link" href="#">Login | Register</a>
           </li>
 
         </ul>
@@ -50,37 +50,65 @@
   </nav>                                                                                           <!-- END NAVBAR-->
 
 
+  <section class="backgroundcontainer">
+    <div class="background">
+        <img src="resources/img/10bg-cadastro.jpg" alt="Janela branca, estilo rústico, fechada, com dois vasos também brancos com duas lindas flores" width="100%"/>
 
+        <!--FORMULÁRIO DE CADASTRO-->
+            <div class="caixacadastro">
+              <div class="cadastrocliente">
+                  <h1>Cadastro de Novo Cliente</h1>
+                    <form method="POST" action="resources/php/cadastro.php">
+                        <p>
+                            <label for="nome">Nome:</label>
+                            <input id="nome" name="nome" required="required" type="text" placeholder=""/>
+                        </p>
+                        <p>
+                            <label for="dataNascimento">Data de Nascimento:</label>
+                            <input id="dataNascimento" name="dataNascimento" required="required" type="text" placeholder=""/><br>
+                        </p>
+                        <p>
+                          <label for="cpf">CPF:</label>
+                          <input id="cpf" name="cpf" required="required" type="text" placeholder=""/><br>
+                        </p>
+                        <p>
+                          <label for="email">Email:</label>
+                          <input id="email" name="email" required="required" type="text" placeholder=""/><br>
+                        </p>
+                        <p>
+                          <label for="telefone">Telefone:</label>
+                          <input id="telefone" name="telefone" required="required" type="text" placeholder=""/><br>
+                        </p>
+                        <br>
+                        <h1>Dados da Ficha Médica do Cliente</h1>
+                        <p>
+                          <label for="atestadoMedico">Atestado Médico:</label>
+                          <input id="atestadoMedico" name="atestadoMedico" required="required" type="text" placeholder=""/><br>
+                        </p>
+                        <p>
+                          <label for="comentario">Comentário:</label>
+                          <input id="comentario" name="comentario" required="required" type="text" placeholder=""/><br>
+                        </p>
+                        <p>
+                          <label for="categoria">Categoria de Treino:</label>
+                          <input id="categoria" name="categoria" required="required" type="text" placeholder="beginner or intermediary"/><br>
+                        </p>
 
-    <!-- INICIO DO CAROUSEL-->
-<div class="carous">
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="resources/img/1.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="resources/img/3.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="resources/img/11bgindex.jpg" class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-</div>          <!--FIM DO CAROUSEL-->
+                        <p>
+                            <input type="submit" value="Cadastrar" id="cadastrar" name="cadastrar">
+                        </p>
+                        
+                       <!--
+
+		- nome			(from categoria)		- beginner or intermediary
+		-->
+
+                    </form>
+              </div>
+            </div>
+                                                        <!--FIM DIV caixatextos-->
+    </div>                                                        <!--FIM DIV background-->
+  </section>                                                          <!--FIM SECTION BACKGROUNDCONTAINER-->
 
 
     <!-- INICIO CAIXA MOTIVACIONAL-->

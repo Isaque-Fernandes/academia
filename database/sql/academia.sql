@@ -17,7 +17,6 @@ CREATE TABLE usuario(
 	comentario VARCHAR(255) DEFAULT NULL,
 	dataInicio DATE NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 INSERT INTO usuario (cpf, nomeUsuario, email, telefone, dataNascimento, atestadoMedico, comentario, dataInicio) VALUES
 	("LOREM", "SUJEITO", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "1999-02-04"),
     	("LOREM", "INDIVÍDUO", "LOREM", "LOREM", "LOREM", "LOREM", "LOREM", "1999-02-04"),
