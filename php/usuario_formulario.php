@@ -21,7 +21,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <link rel="stylesheet" type="text/css" href="../css/usuarioformulario.css" />
     <link rel="stylesheet" type="text/css" href="../css/footer.css" />
-    <title>Cadastro Usuários</title>
+    <title>Standard Fit</title>
 
 </head>
 
