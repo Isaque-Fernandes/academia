@@ -145,7 +145,7 @@
 
         <!-- INICIO FOOTER -->
 
-        <footer id="myFooter">
+        <!-- <footer id="myFooter">
             <div class="container2">
                 <p class="footer-copyright">©2022 Todos os direitos reservados Standard Fit</p>
             </div>
@@ -155,7 +155,7 @@
                 <a href="https://www.instagram.com/jhonatans.a/" class="social-icons"><i class="fa fa-youtube"></i></a>
                 <a href="https://www.instagram.com/jhonatans.a/" class="social-icons"><i class="fa fa-twitter"></i></a>
             </div>
-        </footer>
+        </footer> -->
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
         <!-- FIM DO FOOTER -->
