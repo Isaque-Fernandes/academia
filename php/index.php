@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="../resources/css/index.css" />
     <link rel="stylesheet" type="text/css" href="../resources/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../home.css" />
     <link href="../resources/css/footer.css" rel="stylesheet" />
     <title>Standard - Home</title>
 </head>
@@ -24,12 +25,6 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="./index.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="./quemSomos.php"> Quem Somos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="./contato.php"> Contato</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -107,7 +102,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-3">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Standard Fit</h5>
@@ -124,46 +119,7 @@
 
 
 
-
-
-    <footer>
-        <div class="container-footer">
-            <div class="text text-1">
-
-            </div>
-            <div class="text">
-                <p style="margin-top:50px;">&copy; Todos os direitos reservados</p>
-            </div>
-
-            <div class="text">
-
-                <!-- <p class="background-color:white; ">&copy; Todos os direitos reservados</p> -->
-
-            </div>
-
-        </div>
-
-        <!-- INICIO FOOTER -->
-
-        <!-- <footer id="myFooter">
-            <div class="container2">
-                <p class="footer-copyright">©2022 Todos os direitos reservados Standard Fit</p>
-            </div>
-            <div class="footer-social">
-                <a href="https://www.instagram.com/jhonatans.a/" class="social-icons"><i class="fa fa-facebook"></i></a>
-                <a href="https://www.instagram.com/jhonatans.a/" class="social-icons"><i class="fa fa-instagram"></i></a>
-                <a href="https://www.instagram.com/jhonatans.a/" class="social-icons"><i class="fa fa-youtube"></i></a>
-                <a href="https://www.instagram.com/jhonatans.a/" class="social-icons"><i class="fa fa-twitter"></i></a>
-            </div>
-        </footer> -->
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-        <!-- FIM DO FOOTER -->
-
-
-
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>
