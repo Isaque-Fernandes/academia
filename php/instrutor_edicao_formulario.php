@@ -65,59 +65,55 @@ $instrutor = findById($_GET["idInstrutor"]);
     </nav>
     <!-- FIM DO NAVBAR -->
 
-    <div class="container col-12">
-        <fieldset>
-            <legend>Edição de Dados - Instrutor</legend>
-            <form action="./instrutor_edicao.php" method="post">
-                <div class="form-group mb-3">
-                    <label for="cpf_id" class="form-label">cpf</label>
-                    <input class="form-control" type="text" name="cpf_txt" id="cpf_id" placeholder="Informe o nome do cpf" value="<?= $instrutor->cpf ?>" required>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="nomeInstrutor_id" class="form-label">nomeInstrutor</label>
-                    <input class="form-control" type="text" name="nomeInstrutor_txt" id="nomeInstrutor_id" value="<?= $instrutor->nomeInstrutor ?>" required>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="dataNascimento_id" class="form-label">dataNascimento</label>
-                    <input class="form-control" type="date" name="dataNascimento_txt" id="dataNascimento_id" value="<?= $instrutor->dataNascimento ?>" required>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="email_id" class="form-label">email</label>
-                    <input class="form-control" type="text" name="email_txt" id="email_id" value="<?= $instrutor->email ?>" required>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="telefone_id" class="form-label">telefone</label>
-                    <input class="form-control" type="text" name="telefone_txt" id="telefone_id" value="<?= $instrutor->telefone ?>" required>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="cidade_id" class="form-label">cidade</label>
-                    <input class="form-control" type="text" name="cidade_txt" id="cidade_id" value="<?= $instrutor->cidade ?>" required>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="siglaUf_id" class="form-label">siglaUf</label>
-                    <input class="form-control" type="text" name="siglaUf_txt" id="siglaUf_id" value="<?= $instrutor->siglaUf ?>" required>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="bairro_id" class="form-label">bairro</label>
-                    <input class="form-control" type="text" name="bairro_txt" id="bairro_id" value="<?= $instrutor->bairro ?>" required>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="rua_id" class="form-label">rua</label>
-                    <input class="form-control" type="text" name="rua_txt" id="rua_id" value="<?= $instrutor->rua ?>" required>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="numero_id" class="form-label">numero</label>
-                    <input class="form-control" type="text" name="numero_txt" id="numero_id" value="<?= $instrutor->numero ?>" required>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="complemento_id" class="form-label">complemento</label>
-                    <input class="form-control" type="text" name="complemento_txt" id="complemento_id" value="<?= $instrutor->complemento ?>" required>
-                </div>
+    <!-- INICIO MEIO DO SITE -->
+<section class="backgroundcontainer">
+        <div class="background">
 
-                <button class="btn btn-dark" type="submit" name="idInstrutor_txt" value="<?= $instrutor->idInstrutor ?>">Editar</button>
-            </form>
-        </fieldset>
-    </div>
+
+            <!-- IMAGEM BACKGROUND -->
+            <style>
+                body
+                {
+                    background: url('../img/10bg-cadastro.jpg') no-repeat;
+                }
+            </style>
+            <!-- FIM IMAGEM BACKGROUND -->
+
+
+
+
+
+            <!--FORMULÁRIO DE CADASTRO-->
+            <div class="caixamae">
+                <div class="login-page">
+                <div class="form">
+
+
+                    <legend>Edição de Dados - Instrutor</legend>
+            
+                    <form class="register-form" action="./instrutor_edicao.php" method="post">
+
+                    <input type="text" name="cpf_txt" id="cpf_id" placeholder="Informe o nome do cpf" value="<?= $instrutor->cpf ?>" required>
+                    <input type="text" name="nomeInstrutor_txt" id="nomeInstrutor_id"  value="<?= $instrutor->nomeInstrutor ?>" required>
+                    <input type="date" name="dataNascimento_txt" id="dataNascimento_id"  value="<?= $instrutor->dataNascimento ?>" required>
+                    <input type="text" name="email_txt" id="email_id"  value="<?= $instrutor->email ?>" required>
+                    <input type="text" name="telefone_txt" id="telefone_id"  value="<?= $instrutor->telefone ?>" required>
+                    <input type="text" name="cidade_txt" id="cidade_id"  value="<?= $instrutor->cidade ?>" required>
+                    <input type="text" name="siglaUf_txt" id="siglaUf_id"  value="<?= $instrutor->siglaUf ?>" required>
+                    <input type="text" name="bairro_txt" id="bairro_id"  value="<?= $instrutor->bairro ?>" required>
+                    <input type="text" name="rua_txt" id="rua_id"  value="<?= $instrutor->rua ?>" required>
+                    <input type="text" name="numero_txt" id="numero_id"  value="<?= $instrutor->numero ?>" required>
+                    <input type="text" name="complemento_txt" id="complemento_id"  value="<?= $instrutor->complemento ?>" required>
+
+                        <!-- <button class="btn btn-dark" type="submit">Cadastrar</button> -->
+                        <button type="submit" name="idInstrutor_txt" value="<?= $instrutor->idInstrutor ?>">Editar</button>
+                    </form>
+                </div>
+                </div>
+            </div>              <!--FIM FORMULÁRIO DE CADASTRO-->
+        </div>
+    </section>
+<!-- FIM MEIO DO SITE -->
 
     <footer>
         <div class="container-footer">
