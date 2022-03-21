@@ -22,7 +22,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
 </head>
 
 <body>
-     <!-- INÍCIO NAVBAR -->
+    
 <nav class="navbar navbar-expand-md navbar-light bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.php"><img src="../img/logo1.png" alt="..." height="100px"></a>
@@ -63,28 +63,18 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
             </div>
         </div>
 </nav>
-<!-- FIM DO NAVBAR -->
-    
 
-<!-- INICIO MEIO DO SITE -->
     <section class="backgroundcontainer">
         <div class="background">
 
 
-            <!-- IMAGEM BACKGROUND -->
             <style>
                 body
                 {
                     background: url('../img/10bg-cadastro.jpg') no-repeat;
                 }
             </style>
-            <!-- FIM IMAGEM BACKGROUND -->
-
-
-
-
-
-            <!--FORMULÁRIO DE CADASTRO-->
+         
             <div class="caixamae">
                 <div class="login-page">
                 <div class="form">
@@ -109,17 +99,15 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
                         <legend>Data de Início</legend>
                         <input  type="date" name="dataInicio_txt" id="dataInicio_id" placeholder="Data de Início" required>
 
-                        <!-- <button class="btn btn-dark" type="submit">Cadastrar</button> -->
+                     
                         <button class="btn btn-dark" type="submit" name="botao_txt">Cadastrar</button>
                     </form>
                 </div>
                 </div>
-            </div>              <!--FIM FORMULÁRIO DE CADASTRO-->
+            </div>              
         </div>
     </section>
-<!-- FIM MEIO DO SITE -->
 
-<!-- INICIO FOOTER -->
 <footer>
 <div class="container-footer">
             <div class="text" style="margin:auto;">
@@ -129,7 +117,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
         </div>
     </footer>
 
-    <!-- FIM DO FOOTER -->
+
 
 
 

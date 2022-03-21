@@ -22,7 +22,7 @@ $instrutor = findById($_GET["idInstrutor"]);
 
 <body>
 
-    <!-- INÍCIO NAVBAR -->
+   
     <nav class="navbar navbar-expand-md navbar-light bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.php"><img src="../img/logo1.png" alt="..." height="100px"></a>
@@ -63,27 +63,27 @@ $instrutor = findById($_GET["idInstrutor"]);
             </div>
         </div>
     </nav>
-    <!-- FIM DO NAVBAR -->
 
-    <!-- INICIO MEIO DO SITE -->
+
+ 
 <section class="backgroundcontainer">
         <div class="background">
 
 
-            <!-- IMAGEM BACKGROUND -->
+     
             <style>
                 body
                 {
                     background: url('../img/10bg-cadastro.jpg') no-repeat;
                 }
             </style>
-            <!-- FIM IMAGEM BACKGROUND -->
+          
 
 
 
 
 
-            <!--FORMULÁRIO DE CADASTRO-->
+         
             <div class="caixamae">
                 <div class="login-page">
                 <div class="form">
@@ -105,15 +105,15 @@ $instrutor = findById($_GET["idInstrutor"]);
                     <input type="text" name="numero_txt" id="numero_id"  value="<?= $instrutor->numero ?>" required>
                     <input type="text" name="complemento_txt" id="complemento_id"  value="<?= $instrutor->complemento ?>" required>
 
-                        <!-- <button class="btn btn-dark" type="submit">Cadastrar</button> -->
+                       
                         <button type="submit" name="idInstrutor_txt" value="<?= $instrutor->idInstrutor ?>">Editar</button>
                     </form>
                 </div>
                 </div>
-            </div>              <!--FIM FORMULÁRIO DE CADASTRO-->
+            </div>             
         </div>
     </section>
-<!-- FIM MEIO DO SITE -->
+
 
     <footer>
         <div class="container-footer">

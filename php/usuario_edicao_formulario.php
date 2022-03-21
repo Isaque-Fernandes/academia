@@ -59,26 +59,19 @@ $usuario = findById($_GET["idUsuario"]);
             </div>
         </div>
     </nav>
-    <!-- FIM DO NAVBAR -->
-    <!-- INICIO MEIO DO SITE -->
+
 <section class="backgroundcontainer">
         <div class="background">
 
 
-            <!-- IMAGEM BACKGROUND -->
+          
             <style>
                 body
                 {
                     background: url('../img/10bg-cadastro.jpg') no-repeat;
                 }
             </style>
-            <!-- FIM IMAGEM BACKGROUND -->
-
-
-
-
-
-            <!--FORMULÁRIO DE CADASTRO-->
+        
             <div class="caixamae">
                 <div class="login-page">
                 <div class="form">
@@ -99,15 +92,15 @@ $usuario = findById($_GET["idUsuario"]);
                     <input type="text" name="dataInicio_txt" id="dataInicio_id" placeholder="Informe o Data Início" value="<?= $usuario->dataInicio ?>" required>
        
 
-                        <!-- <button class="btn btn-dark" type="submit">Cadastrar</button> -->
+                        
                         <button type="submit" name="idUsuario_txt" value="<?= $usuario->idUsuario ?>">Editar</button>
                     </form>
                 </div>
                 </div>
-            </div>              <!--FIM FORMULÁRIO DE CADASTRO-->
+            </div>             
         </div>
     </section>
-<!-- FIM MEIO DO SITE -->
+
 
     <footer>
         <div class="container-footer">

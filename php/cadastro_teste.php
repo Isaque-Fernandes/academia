@@ -6,13 +6,12 @@ session_start();
 
 $con = getConnection();
 
-// print_r($_REQUEST);
+
 if (isset($_POST['botao_txt']) && !empty($_POST['email_txt']) && !empty($_POST['senha_txt'])) {
     $email = $_POST['email_txt'];
     $senha = $_POST['senha_txt'];
 
-    // print_r("Email: " . $email);
-    // print_r("Senha: " . $email);
+
 
     $sql = "SELECT * FROM cadastro WHERE email = '$email' and senha = '$senha'";
 
@@ -29,7 +28,7 @@ if (isset($_POST['botao_txt']) && !empty($_POST['email_txt']) && !empty($_POST['
         header('Location: cadastro_sistema.php');
     }
 
-    // print_r($rs);
+
 
 
 } else {

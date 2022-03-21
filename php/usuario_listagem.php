@@ -25,7 +25,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
 </head>
 
 <body>
-     <!-- INÍCIO NAVBAR -->
+     
 <nav class="navbar navbar-expand-md navbar-light bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.php"><img src="../img/logo1.png" alt="..." height="100px"></a>
@@ -66,18 +66,18 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
             </div>
         </div>
 </nav>
-<!-- FIM DO NAVBAR -->
+
 
 <section class="backgroundcontainer">
         <div class="background">
-            <!-- IMAGEM BACKGROUND -->
+      
             <style>
                 body
                 {
                     background: url('../img/2.jpg') no-repeat;
                 }
             </style>
-            <!-- FIM IMAGEM BACKGROUND -->
+            
 
         
 
@@ -119,7 +119,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
     </div>
     </div>
 </section>
-    <!-- INICIO FOOTER -->
+
 <footer>
 <div class="container-footer">
             <div class="text" style="margin:auto;">
@@ -129,7 +129,7 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
         </div>
 </footer>
 
-    <!-- FIM DO FOOTER -->
+   
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

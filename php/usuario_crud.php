@@ -3,7 +3,6 @@
 require_once("./conexao.php");
 
 
-// CRIAÇÃO DA FUNÇÃO addUsuario
 function addUsuario($usuario)
 {
     try {
@@ -35,7 +34,7 @@ function addUsuario($usuario)
     }
 }
 
-// CRIAÇÃO DA FUNÇÃO listarUsuario
+
 
 function listarUsuario()
 {

@@ -91,7 +91,7 @@
     </div>
 
 
-    <!-- INICIO CAIXA MOTIVACIONAL-->
+ 
 
     <div class="containermotivacional">
         <div class="row">
@@ -114,7 +114,7 @@
         </div>
     </div>
 
-    <!-- FIM CAIXA MOTIVACIONAL-->
+ 
 
     <footer>
         <div class="container-footer">
