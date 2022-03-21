@@ -16,9 +16,41 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['email']) == true
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/instrutorformulario.css" />
     <title>Document</title>
 </head>
 
+
+<!-- INICIO MEIO DO SITE -->
+<section class="backgroundcontainer">
+        <div class="background">
+
+
+            <!-- IMAGEM BACKGROUND 
+            <style>
+                body
+                {
+                    background: url('../img/6.jpg') no-repeat;
+                }
+            </style>
+            <!-- FIM IMAGEM BACKGROUND -->
+
+            <div class="caixamae">
+                <div class="login-page">
+                <div class="form">
+
+
+                    <legend>Acesso Permitido</legend>
+                </div>
+                </div>
+            </div>            
+        </div>
+</section>
+<!-- FIM MEIO DO SITE -->
+
+
+
+<!--
 <body>
     <h1>Acesso Permitido</h1>
     <!-- JavaScript Bundle with Popper -->
